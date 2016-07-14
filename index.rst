@@ -8,6 +8,6 @@ Welcome to Devino documentation!
 .. _user-docs:
 .. toctree::
    :maxdepth: 2
-   :caption: User Documentation
+   :caption: SMS Рассылки
 
    httpapi
