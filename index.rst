@@ -1,7 +1,7 @@
 Welcome to Devino documentation!
 ================================
 
-Contents:
+Contents
 .. toctree::
    :maxdepth: 2
    :caption: User Documentation
