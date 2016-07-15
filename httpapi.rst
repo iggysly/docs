@@ -193,7 +193,7 @@ https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D6287
 
 Если все проверки пройдены успешно, то сервис отправит сообщение в SMS-центр и вернет идентификатор отправленного сообщения со
 следующими параметрами: 
-Формат ответа::
+Формат ответа:
 
       HTTP/1.1 200 OK   
 Cache-Control: private   
@@ -201,7 +201,7 @@ Connection: Keep-Alive
 Content-Type: application/json; charset=utf-8   
 <Идентификатор сообщения>
 
-Например::
+Например:
 
       HTTP/1.1 200 OK   
 Cache-Control: private   
