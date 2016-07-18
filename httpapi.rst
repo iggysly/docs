@@ -210,19 +210,24 @@ https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D6287
 следующими параметрами: 
 Формат ответа:
 
-      HTTP/1.1 200 OK   
-Cache-Control: private   
-Connection: Keep-Alive  
-Content-Type: application/json; charset=utf-8   
-<Идентификатор сообщения>
+	.. code-block::
+
+      	HTTP/1.1 200 OK   
+	Cache-Control: private   
+	Connection: Keep-Alive  
+	Content-Type: application/json; charset=utf-8   
+	<Идентификатор сообщения>
+	
 
 Например:
+.. code-block:: python
 
-      HTTP/1.1 200 OK   
-Cache-Control: private   
-Connection: Keep-Alive  
-Content-Type: application/json; charset=utf-8   
-["GW0261BBD6B3"]
+	HTTP/1.1 200 OK   
+	Cache-Control: private   
+	Connection: Keep-Alive  
+	Content-Type: application/json; charset=utf-8   
+	["GW0261BBD6B3"]
+	
 
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице, ответ от сервиса будет в виде последовательности идентификаторов сообщений, например: 
 ["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]   
