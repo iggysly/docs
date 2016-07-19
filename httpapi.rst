@@ -83,7 +83,6 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	Content-Type: application/json; charset=utf-8       
 	"Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1"  
 	
-
 В случае возникновения исключительной ситуации во время обработки запроса или ошибки аутентификации, Сервис возвращает Код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
 .. code-block:: python
@@ -94,7 +93,6 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 	}  
 	
-
 Например, при ошибке авторизации: 
 
 .. code-block:: python
@@ -114,10 +112,17 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Протокол HTTP не имеет состояний. Это означает, что веб-сервер обрабатывает каждый HTTP-запрос со стороны внешнего приложения или сайта независимо, а сервер не сохраняет данные о значениях переменных, использованных в предшествующих запросах. Поэтому данные, полученные при авторизации пользователя, должны быть переданы и при осуществлении запроса получения баланса авторизованного пользователя. 
 Сервис возвращает значение баланса авторизованного пользователя в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
-https://integrationapi.net/rest/User/Balance? SessionID=<Идентификатор сессии> 
-Ниже приведен пример запроса: 
-https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37W EHQVOYKP0T1GSLHX1  
 
+.. code-block::
+
+	https://integrationapi.net/rest/User/Balance? SessionID=<Идентификатор сессии> 
+	
+Ниже приведен пример запроса: 
+
+.. code-block::
+
+	https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37W EHQVOYKP0T1GSLHX1  
+	
 В Табл. 2 приводится полный список параметров запроса. 
 Табл. 2. Параметры GET-запроса баланса
 
@@ -147,14 +152,19 @@ https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37W EHQVO
 	Content-Type: application/json; charset=utf-8  20015.3  
 	
 В случае возникновения исключительной ситуации во время обработки запроса или ошибки аутентификации, сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
-{  
-Code: <Код ошибки>, Desc: <”Текст ошибки”>  
-}  
+.. code-block:: 
+
+	{  
+	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
+	}  
+
 Например, при ошибке аутентификации идентификатора сессии: 
-{  
-Code: 4,  
-Desc: "SessionID expired"  
-}  
+.. code-block:: 
+
+	{  
+	Code: 4,  
+	Desc: "SessionID expired"  
+	}  
 
 Отправка SMS-сообщений
 ----------------------
@@ -271,7 +281,9 @@ Data=<Текст сообщения>&
 Validity=<Время жизни сообщения>&  
 SendDate=<Дата отправки сообщения>  
 
-Ниже приведен пример запроса:: 
+Ниже приведен пример запроса:
+
+.. code-block:: 
 
 https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=te stdata&Validity=10&destinationAddress= 79160000000& data=testdata&  sendDate=2011-01-28T16:00:00& validity=10  
 
@@ -323,7 +335,6 @@ https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0
 	Content-Type: application/json; charset=utf-8   
 	<Идентификатор сообщения>   
 	
-
 Например: 
 
 .. code-block:: python
@@ -334,7 +345,6 @@ https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0
 	Content-Type: application/json; charset=utf-8   
 	["GW0261BBD6B3"]   
 	
-
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице, ответ от сервиса будет в виде последовательности идентификаторов сообщений: 
 ["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]  
 Например: 
@@ -401,7 +411,6 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 Валидность адреса отправителя; 
 Длину сообщения. 
 Если все проверки пройдены успешно, то сервис отправит сообщение в SMS-центр и вернет идентификатор отправленного сообщения со следующими параметрами:
-
 	
 	Формат ответа:  
 	HTTP/1.1 200 OK   
@@ -410,9 +419,7 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	Content-Type: application/json; charset=utf-8   
 	<Идентификатор сообщения>   
 	
-	
 Например: 
-
 	
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -420,14 +427,12 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	Content-Type: application/json; charset=utf-8   
 	["GW0261BBD6B3"]   
 	
-	
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице,  ответ от сервиса будет в виде последовательно расположенных идентификаторов сегментов сообщения. Для нескольких сообщений идентификаторы сегментов будут расположены последовательно – сначала последовательно все сегменты одного сообщения, затем – все сегменты другого, например: 
 
 	.. code-block:: 
 	
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
 	["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
-	
 	
 	Например:  
 	
@@ -440,14 +445,12 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
 	["SAR-GW01+79053500000-5f3d1972-2-1","SAR-GW01+79053500000-5f3d1972-2-2]   
 	
-
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
 	.. code-block:: 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
 	}  
-	
 	
 	Например: 
 	
