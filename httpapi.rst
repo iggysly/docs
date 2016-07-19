@@ -228,7 +228,7 @@ Validity=<Время жизни сообщения>
 
 Например:
 
-	.. code-block:: python
+	.. code-block:: 
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
