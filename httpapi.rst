@@ -161,7 +161,11 @@ DestinationAddress=<Номер получателя>&
 Data=<Текст сообщения>&  
 Validity=<Время жизни сообщения>  
 Ниже приведен пример запроса: 
-https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D62878786B5B&DestinationAddress=79161002030&SourceAddress=DEVINO&Data=test&Validity=0
+
+	.. code-block:: 
+	
+	https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D62878786B5B&DestinationAddress=79161002030&SourceAddress=DEVINO&Data=test&Validity=0
+	
 
 В Табл. 3 приводится полный список параметров запроса. 
 Табл. 3. Параметры запроса на отправку SMS-сообщения  
@@ -387,7 +391,7 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 Валидность адреса отправителя; 
 Длину сообщения. 
 Если все проверки пройдены успешно, то сервис отправит сообщение в SMS-центр и вернет идентификатор отправленного сообщения со следующими параметрами:
-.. code-block:: 
+
 	
 	Формат ответа:  
 	HTTP/1.1 200 OK   
@@ -398,7 +402,7 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	
 	
 Например: 
-.. code-block:: 
+
 	
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -408,23 +412,41 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	
 	
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице,  ответ от сервиса будет в виде последовательно расположенных идентификаторов сегментов сообщения. Для нескольких сообщений идентификаторы сегментов будут расположены последовательно – сначала последовательно все сегменты одного сообщения, затем – все сегменты другого, например: 
-["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
-["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
-Например:                                                                   
-HTTP/1.1 200 OK   
-Cache-Control: private   
-Connection: Keep-Alive  
-Content-Type: application/json; charset=utf-8   
-["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
-["SAR-GW01+79053500000-5f3d1972-2-1","SAR-GW01+79053500000-5f3d1972-2-2]   
+
+	.. code-block:: 
+	
+	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
+	["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
+	
+	
+	Например:  
+	
+	.. code-block:: 
+	
+	HTTP/1.1 200 OK   
+	Cache-Control: private   
+	Connection: Keep-Alive  
+	Content-Type: application/json; charset=utf-8   
+	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
+	["SAR-GW01+79053500000-5f3d1972-2-1","SAR-GW01+79053500000-5f3d1972-2-2]   
+	
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
-{  
-Code: <Код ошибки>, Desc: <”Текст ошибки”> 
-}  
-Например: 
-{  
-Code: 6,
-Desc: "Invalid source address"  
-}  
+
+	.. code-block:: 
+	{  
+	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
+	}  
+	
+	
+	Например: 
+	
+	.. code-block:: 
+	
+	{  
+	Code: 6,
+	Desc: "Invalid source address"  
+	}  
+	
+	
 Внимание! Возможность отправки sms на несколько номеров с учетом часового пояса получателя пока недоступна. 
