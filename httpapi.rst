@@ -493,7 +493,7 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	}  
 	
 	
-	Например:
+Например:
 	
 .. code-block:: 
 	
