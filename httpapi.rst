@@ -289,19 +289,19 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block::
 
-https://integrationapi.net/rest/Sms/SendByTimeZone
-SessionID=<Идентификатор сессии>&  
-SourceAddress=<Адрес отправителя>&  
-DestinationAddress=<Номер получателя>&  
-Data=<Текст сообщения>&  
-Validity=<Время жизни сообщения>&  
-SendDate=<Дата отправки сообщения>  
+	https://integrationapi.net/rest/Sms/SendByTimeZone
+	SessionID=<Идентификатор сессии>&  
+	SourceAddress=<Адрес отправителя>&  
+	DestinationAddress=<Номер получателя>&  
+	Data=<Текст сообщения>&  
+	Validity=<Время жизни сообщения>&  
+	SendDate=<Дата отправки сообщения>  
 
 Ниже приведен пример запроса:
 
 .. code-block:: 
 
-https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=te stdata&Validity=10&destinationAddress= 79160000000& data=testdata&  sendDate=2011-01-28T16:00:00& validity=10  
+	https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=te stdata&Validity=10&destinationAddress= 79160000000& data=testdata&  sendDate=2011-01-28T16:00:00& validity=10  
 
 В Табл. 4 приводится полный список параметров запроса. 
 Табл. 4. Параметры POST-запроса на отправку SMS-сообщения c учетом часового пояса  
