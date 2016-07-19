@@ -73,7 +73,6 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Ниже приведен пример ответа:
 	.. code-block:: python
-	
 	HTTP/1.1 200 OK       
 	Cache-Control: private       
 	Connection: Keep-Alive      
@@ -163,7 +162,6 @@ Validity=<Время жизни сообщения>
 Ниже приведен пример запроса: 
 
 	.. code-block:: python
-	
 	https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D62878786B5B&DestinationAddress=79161002030&SourceAddress=DEVINO&Data=test&Validity=0
 	
 
@@ -237,7 +235,6 @@ Validity=<Время жизни сообщения>
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
 .. code-block:: python
-
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
 	}
@@ -245,7 +242,6 @@ Validity=<Время жизни сообщения>
 	
 Например: 
 .. code-block:: python
-
 	{  
 	Code: 6,  
 	Desc: "Invalid source address"  
