@@ -233,7 +233,7 @@ Validity=<Время жизни сообщения>
 следующими параметрами: 
 Формат ответа:
 
-	.. code-block::
+.. code-block::
 
       	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -244,7 +244,7 @@ Validity=<Время жизни сообщения>
 
 Например:
 
-	.. code-block:: 
+.. code-block:: 
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -257,14 +257,17 @@ Validity=<Время жизни сообщения>
 ["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]   
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-	.. code-block:: 
+.. code-block:: 
+
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
 	}
 	
 	
 Например: 
-	.. code-block:: 
+
+.. code-block::
+
 	{  
 	Code: 6,  
 	Desc: "Invalid source address"  
