@@ -162,7 +162,7 @@ Data=<Текст сообщения>&
 Validity=<Время жизни сообщения>  
 Ниже приведен пример запроса: 
 
-	.. code-block:: 
+	.. code-block:: python
 	
 	https://integrationapi.net/rest/Sms/Send?SessionId=C619DF83829F4C3094CB54F4D62878786B5B&DestinationAddress=79161002030&SourceAddress=DEVINO&Data=test&Validity=0
 	
