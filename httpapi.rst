@@ -359,10 +359,15 @@ Content-Type: application/json; charset=utf-8
 ["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]  
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
+.. code-block::
+
 {  
 Code: <Код ошибки>, Desc: <”Текст ошибки”>  
 }  
+
 Например: 
+.. code-block::
+
 {  
 Code: 6,  
 Desc: "Invalid source address"  
@@ -416,7 +421,9 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 Длину сообщения. 
 Если все проверки пройдены успешно, то сервис отправит сообщение в SMS-центр и вернет идентификатор отправленного сообщения со следующими параметрами:
 	
-	Формат ответа:  
+	Формат ответа:
+.. code-block::
+
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
 	Connection: Keep-Alive  
@@ -424,7 +431,8 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	<Идентификатор сообщения>   
 	
 Например: 
-	
+.. code-block::
+
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
 	Connection: Keep-Alive  
@@ -432,15 +440,13 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	["GW0261BBD6B3"]   
 	
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице,  ответ от сервиса будет в виде последовательно расположенных идентификаторов сегментов сообщения. Для нескольких сообщений идентификаторы сегментов будут расположены последовательно – сначала последовательно все сегменты одного сообщения, затем – все сегменты другого, например: 
-
-	.. code-block:: 
+.. code-block:: 
 	
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
 	["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
 	
 	Например:  
-	
-	.. code-block:: 
+.. code-block:: 
 	
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -450,20 +456,17 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	["SAR-GW01+79053500000-5f3d1972-2-1","SAR-GW01+79053500000-5f3d1972-2-2]   
 	
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
-
-	.. code-block:: 
+.. code-block:: 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
 	}  
 	
 	Например: 
-	
-	.. code-block:: 
+.. code-block:: 
 	
 	{  
 	Code: 6,
 	Desc: "Invalid source address"  
 	}  
-	
 	
 Внимание! Возможность отправки sms на несколько номеров с учетом часового пояса получателя пока недоступна. 
