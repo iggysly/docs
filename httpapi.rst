@@ -169,7 +169,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 Отправка SMS-сообщений
 ----------------------
 
-
+	
 Отправка SMS-сообщения на один номер без учета часового пояса получателя
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Сервис инициирует отправку SMS-сообщения в соответствии со значениями параметров, передаваемых сервису в POST-запросе следующего формата: 
@@ -350,7 +350,11 @@ https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0
 	["GW0261BBD6B3"]   
 	
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице, ответ от сервиса будет в виде последовательности идентификаторов сообщений: 
+
+.. code-block:: python
+
 ["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]  
+
 Например: 
 
 .. code-block::
@@ -389,7 +393,10 @@ DestinationAddresses=<Номер(а) получателя>&
 Data=<Текст сообщения>&  
 Validity=<Время жизни сообщения>  
 Ниже приведен пример запроса: 
+.. code-block:: python
+
 https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAd...
+
 В Табл. 5 приводится полный список параметров запроса. 
 Табл. 5. Параметры POST-запроса на отправку SMS-сообщения на несколько номеров  
 
@@ -437,8 +444,8 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	Content-Type: application/json; charset=utf-8   
 	<Идентификатор сообщения>   
 	
+	
 Например: 
-
 .. code-block::
 
 	HTTP/1.1 200 OK   
@@ -454,8 +461,8 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
 	["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
 	
-	Например:  
 	
+	Например:  
 .. code-block:: 
 	
 	HTTP/1.1 200 OK   
@@ -472,7 +479,8 @@ https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOY
 	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
 	}  
 	
-	Например: 
+	
+	Например:
 	
 .. code-block:: 
 	
