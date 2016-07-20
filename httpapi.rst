@@ -302,7 +302,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/SendByTimeZone?SessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
+	https://integrationapi.net/rest/Sms/SendByTimeZone?SessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata&sendDate=2011-01-28T16:00:00&validity=10
 	
 
 В Табл. 4 приводится полный список параметров запроса. 
