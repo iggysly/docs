@@ -261,7 +261,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	<Идентификатор сообщения>
 	
 
-	Например:
+Например:
 
 .. code-block:: 
 
