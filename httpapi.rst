@@ -389,7 +389,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block::
+.. code-block:: python
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
