@@ -118,14 +118,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 Протокол HTTP не имеет состояний. Это означает, что веб-сервер обрабатывает каждый HTTP-запрос со стороны внешнего приложения или сайта независимо, а сервер не сохраняет данные о значениях переменных, использованных в предшествующих запросах. Поэтому данные, полученные при авторизации пользователя, должны быть переданы и при осуществлении запроса получения баланса авторизованного пользователя. 
 Сервис возвращает значение баланса авторизованного пользователя в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
 
-.. code-block::
+.. code-block:: python	
 
 	https://integrationapi.net/rest/User/Balance? SessionID=<Идентификатор сессии> 
 	
 
 Ниже приведен пример запроса: 
 
-.. code-block::
+.. code-block:: python	
 
 	https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37W EHQVOYKP0T1GSLHX1  
 	
@@ -143,7 +143,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Сервис проверяет валидность полученного SessionID (проверяет актуальность и наличие в системе) и в случае успеха авторизует пользователя и в ответе присылает баланс пользователя со следующими параметрами: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -154,7 +154,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Ниже приведен пример ответа: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -164,7 +164,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 В случае возникновения исключительной ситуации во время обработки запроса или ошибки аутентификации, сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
@@ -173,7 +173,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например, при ошибке аутентификации идентификатора сессии: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: 4,  
@@ -252,7 +252,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 следующими параметрами: 
 	Формат ответа:
 
-.. code-block::
+.. code-block:: python	
 
       	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -263,7 +263,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например:
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -274,14 +274,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице, ответ от сервиса будет в виде последовательности идентификаторов сообщений, например: 
 
-.. code-block::
+.. code-block:: python	
 
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]   
 
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
@@ -290,7 +290,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 Например: 
 
-.. code-block::
+.. code-block:: python	
 
 	{  
 	Code: 6,  
@@ -302,7 +302,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Сервис инициирует отправку SMS-сообщения в соответствии со значениями параметров, передаваемых сервису в POST-запросе следующего формата: 
 
-.. code-block::
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/SendByTimeZone
 	SessionID=<Идентификатор сессии>&  
@@ -315,7 +315,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Ниже приведен пример запроса:
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=te stdata&Validity=10&destinationAddress= 79160000000& data=testdata&  sendDate=2011-01-28T16:00:00& validity=10  
 	
@@ -400,7 +400,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block::
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
@@ -409,7 +409,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block::
+.. code-block:: python	
 
 	{  
 	Code: 6,  
@@ -478,7 +478,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 Формат ответа:
 	
-.. code-block::
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -489,7 +489,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 Например: 
 
-.. code-block::
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -499,7 +499,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 В случаях, когда длина отправляемого сообщения превышает 70 символов на кириллице или 160 символов на латинице,  ответ от сервиса будет в виде последовательно расположенных идентификаторов сегментов сообщения. Для нескольких сообщений идентификаторы сегментов будут расположены последовательно – сначала последовательно все сегменты одного сообщения, затем – все сегменты другого, например:
 
-.. code-block::
+.. code-block:: python	
 	
 	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2",  
 	["SAR-GW01+79053500000-5d3b1972-2-1","SAR-GW01+79053500000-5d3b1972-2-2]   
@@ -507,7 +507,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 Например:
 	
-.. code-block:: 
+.. code-block:: python	
 	
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -519,7 +519,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
@@ -528,7 +528,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	
 Например:
 	
-.. code-block:: 
+.. code-block:: python	
 	
 	{  
 	Code: 6,
@@ -542,7 +542,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Сервис возвращает статус отправленного sms-сообщения в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/State?  
 	sessionId=<Идентификатор сессии>  
@@ -551,7 +551,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Ниже приведен пример запроса для односегментного сообщения (длина которого не превышает 70 символов на кириллице или 160 символов на латинице): 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/State?  
 	sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1  
@@ -560,7 +560,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Для сообщений, длина которых превышает 70 символов на кириллице и 160 на латинице, запрос должен формироваться для каждого сегмента сообщений, например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/State?sessionID= 1AED345F65DD4C27BD37A17970C427FAE991&messageID=SAR-W+84333377-f71d25b0-2-1
 	
@@ -578,7 +578,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 После получения запроса сервис проверит валидность идентификатора сессии и наличие отправленного сообщения (сегмента сообщения) с присланным идентификатором. Если все проверки пройдены успешно, то сервис вернет статус отправленного sms-сообщения в jsonформате со следующими параметрами: 
 
-.. code-block:: 
+.. code-block:: python	 
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -595,7 +595,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
@@ -607,7 +607,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”> 
@@ -616,7 +616,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 
 	{  
@@ -651,7 +651,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Сервис возвращает входящие sms-сообщения за период в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/In?
 	sessionId=<Идентификатор сессии>& minDateUTC=<Дата и время начала периода>& maxDateUTC=<Дата и время окончания периода>  
@@ -659,7 +659,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Ниже приведен пример запроса: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/In?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&
 	minDateUTC=2011-01-01T00:00:00& maxDateUTC=2011-01-11T00:00:00
@@ -684,7 +684,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 После получения запроса сервис проверит валидность идентификатора сессии и даты-времени начала и окончания периода присланным идентификатором. Если все проверки пройдены успешно, то сервис вернет перечень сообщений и их параметров за период в json-файла следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK  
 	Cache-Control: private  
@@ -699,7 +699,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK  
 	Cache-Control: private  
@@ -719,7 +719,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
@@ -728,7 +728,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	 
 
 	{  
 	Code: 9, 
@@ -745,14 +745,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Сервис возвращает статистику по SMS-рассылкам за период в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/Statistics? sessionId=FBHKZT9TBBTUWYUR1PYUTYRAGRLUUG0R8A8Z& startDateTime=2012-01-18%2000:00:00& endDateTime=2012-01-18%2023:59:00
 	
 
 Ниже приведен пример запроса:
 
-.. code-block:: 
+.. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/Statistics?sessionId=FBHKZT9TBBTUWYUR1 PYUTYRAGRLUUG0R8A8Z&  startDateTime=2012-01-18%2000:00:00& endDateTime=2012-0118%2023:59:00
 	
@@ -779,7 +779,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 После получения запроса сервис проверит валидность присланного идентификатора сессии и дат начала/окончания формирования статистики (включая ограничение на то, что охватываемый диапазон должен не превышать 3 месяцев). Если все проверки пройдены успешно, то сервис вернет статистику по sms-сообщениям в jsonформате со следующими параметрами: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK  
 	Cache-Control: private  
@@ -798,7 +798,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	HTTP/1.1 200 OK  
 	Cache-Control: private  
@@ -817,7 +817,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
@@ -826,7 +826,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 Например: 
 
-.. code-block:: 
+.. code-block:: python	
 
 	{  
 	Code: 2, 
