@@ -40,14 +40,14 @@ API Сервиса отправки SMS сообщений организова�
 	
 Должно быть закодировано как:
 
-.. code-block:: 
+.. code-block:: python	
 
         login=Jonathan+Do&password=a+%2B+b+%3D%3D+13%25%21  
 	
 
 Ниже приведен пример запроса:
 
-.. code-block:: 
+.. code-block:: python	
 
 	 https://integrationapi.net/rest/user/sessionid?login=test&password=11111   
 	
