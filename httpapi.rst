@@ -186,14 +186,10 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python
 
-	https://integrationapi.net/rest/Sms/Send?  
-	SessionID=<Идентификатор сессии>&  
-	SourceAddress=<Адрес отправителя>&  
-	DestinationAddress=<Номер получателя>&  
-	Data=<Текст сообщения>&  
-	Validity=<Время жизни сообщения>  
+	https://integrationapi.net/rest/Sms/Send?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&
+	DestinationAddress=<Номер получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>  
 	
-	
+
 Ниже приведен пример запроса: 
 	
 .. code-block:: python
@@ -299,20 +295,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/SendByTimeZone
-	SessionID=<Идентификатор сессии>&  
-	SourceAddress=<Адрес отправителя>&  
-	DestinationAddress=<Номер получателя>&  
-	Data=<Текст сообщения>&  
-	Validity=<Время жизни сообщения>&  
-	SendDate=<Дата отправки сообщения>  
+	https://integrationapi.net/rest/Sms/SendByTimeZone?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&DestinationAddress=<Номер получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>&SendDate=<Дата отправки сообщения>  
 	
 
 Ниже приведен пример запроса:
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
+	https://integrationapi.net/rest/Sms/SendByTimeZone?SessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
 	
 
 В Табл. 4 приводится полный список параметров запроса. 
@@ -418,13 +408,8 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block::
 
-	https://integrationapi.net/rest/Sms/SendBulk?  
-	SessionID=<Идентификатор сессии>&  
-	SourceAddress=<Адрес отправителя>&  
-	DestinationAddresses=<Номер(а) получателя>&  
-	Data=<Текст сообщения>&  
-	Validity=<Время жизни сообщения>
-
+	https://integrationapi.net/rest/Sms/SendBulk?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&	DestinationAddresses=<Номер(а) получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>
+	
 
 Ниже приведен пример запроса: 
 
@@ -651,8 +636,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/In?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&
-	minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
+	https://integrationapi.net/rest/Sms/In?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
 	
  
 Табл. 8. Параметры GET-запроса на получение сообщений за период  
