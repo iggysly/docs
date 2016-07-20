@@ -408,14 +408,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block::
 
-	https://integrationapi.net/rest/Sms/SendBulk?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&	DestinationAddresses=<Номер(а) получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>
+	https://integrationapi.net/rest/Sms/SendBulk?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&DestinationAddresses=<Номер(а) получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>
 	
 
 Ниже приведен пример запроса: 
 
 .. code-block:: python
 
-	https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
+	https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddresses=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata&sendDate=2011-01-28T16:00:00&validity=10
 
 В Табл. 5 приводится полный список параметров запроса. 
 
