@@ -91,9 +91,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 .. code-block:: python
 
         {  
-       
 	Code: <Код ошибки>, Desc: <”Текст ошибки”>  
-	
 	}  
 	
 
@@ -102,11 +100,8 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 .. code-block:: python
 
 	 {  
-	 
 	 Code: 4,  
-	 
 	 Desc: "Invalid user login or password" 
-	 
 	 }  
 	 
 
@@ -120,14 +115,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/User/Balance? SessionID=<Идентификатор сессии> 
+	https://integrationapi.net/rest/User/Balance?SessionID=<Идентификатор сессии> 
 	
 
 Ниже приведен пример запроса: 
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37W EHQVOYKP0T1GSLHX1  
+	https://integrationapi.net/rest/User/Balance?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1  
 	
 
 В Табл. 2 приводится полный список параметров запроса. 
@@ -159,7 +154,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	HTTP/1.1 200 OK   
 	Cache-Control: private   
 	Connection: Keep-Alive  
-	Content-Type: application/json; charset=utf-8  20015.3  
+	Content-Type: application/json; charset=utf-8
 	
 
 В случае возникновения исключительной ситуации во время обработки запроса или ошибки аутентификации, сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
@@ -191,7 +186,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python
 
-	HTML-комментарий: HTML-комментарий</span> <a href=https://integrationapi.net/rest/Sms/Send?  
+	https://integrationapi.net/rest/Sms/Send?  
 	SessionID=<Идентификатор сессии>&  
 	SourceAddress=<Адрес отправителя>&  
 	DestinationAddress=<Номер получателя>&  
@@ -276,7 +271,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	["SAR-GW01+79160000000-5f3b1972-2-1","SAR-GW01+79160000000-5f3b1972-2-2"]   
+	["SAR-GW01+79160000000-5f3b1972-2-1", "SAR-GW01+79160000000-5f3b1972-2-2"]   
 
 
 Если какая-нибудь проверка не проходит успешно, то сервис возвращает код ошибки (см. Табл. 10) в виде JSON следующего формата: 
@@ -317,7 +312,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQV OYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=te stdata&Validity=10&destinationAddress= 79160000000& data=testdata&  sendDate=2011-01-28T16:00:00& validity=10  
+	https://integrationapi.net/rest/Sms/Send?SessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
 	
 
 В Табл. 4 приводится полный список параметров запроса. 
@@ -435,7 +430,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python
 
-	https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAd...
+	https://integrationapi.net/rest/Sms/SendBulk?SessionID=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&destinationAddress=79160000000&data=testdata& sendDate=2011-01-28T16:00:00&validity=10
 
 В Табл. 5 приводится полный список параметров запроса. 
 
@@ -544,25 +539,21 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/State?  
-	sessionId=<Идентификатор сессии>  
-	&messageId=<Идентификатор сообщения>   
+	https://integrationapi.net/rest/Sms/State?sessionId=<Идентификатор сессии>&messageId=<Идентификатор сообщения>   
 	
 
 Ниже приведен пример запроса для односегментного сообщения (длина которого не превышает 70 символов на кириллице или 160 символов на латинице): 
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/State?  
-	sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1  
-	&messageId=GW0261BA732A   
+	https://integrationapi.net/rest/Sms/State?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&messageId=GW0261BA732A   
 	
 
 Для сообщений, длина которых превышает 70 символов на кириллице и 160 на латинице, запрос должен формироваться для каждого сегмента сообщений, например: 
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/State?sessionID= 1AED345F65DD4C27BD37A17970C427FAE991&messageID=SAR-W+84333377-f71d25b0-2-1
+	https://integrationapi.net/rest/Sms/State?sessionID=1AED345F65DD4C27BD37A17970C427FAE991&messageID=SAR-W+84333377f71d25b0-2-1
 	
 
 Табл. 6. Параметры GET-запроса статуса отправленного сообщения (сегмента сообщения)
@@ -622,7 +613,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 	{  
 	Code: 1,
 	Desc: "MessageID can not be null or empty Parameter name: messageId" 
-	 }
+	}
 	 
 
 Табл. 7. Параметры ответа на запрос статуса сообщения 
@@ -653,8 +644,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/In?
-	sessionId=<Идентификатор сессии>& minDateUTC=<Дата и время начала периода>& maxDateUTC=<Дата и время окончания периода>  
+	https://integrationapi.net/rest/Sms/In?sessionId=<Идентификатор сессии>& minDateUTC=<Дата и время начала периода>&maxDateUTC=<Дата и время окончания периода> 
 	
 
 Ниже приведен пример запроса: 
@@ -662,7 +652,7 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 .. code-block:: python	
 
 	https://integrationapi.net/rest/Sms/In?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&
-	minDateUTC=2011-01-01T00:00:00& maxDateUTC=2011-01-11T00:00:00
+	minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
 	
  
 Табл. 8. Параметры GET-запроса на получение сообщений за период  
@@ -747,14 +737,14 @@ Content-Type: application/json; charset=utf-8 (фактически значен
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/Statistics? sessionId=FBHKZT9TBBTUWYUR1PYUTYRAGRLUUG0R8A8Z& startDateTime=2012-01-18%2000:00:00& endDateTime=2012-01-18%2023:59:00
+	https://integrationapi.net/rest/Sms/Statistics?sessionId=FBHKZT9TBBTUWYUR1PYUTYRAGRLUUG0R8A8Z&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-01-18%2023:59:00
 	
 
 Ниже приведен пример запроса:
 
 .. code-block:: python	
 
-	https://integrationapi.net/rest/Sms/Statistics?sessionId=FBHKZT9TBBTUWYUR1 PYUTYRAGRLUUG0R8A8Z&  startDateTime=2012-01-18%2000:00:00& endDateTime=2012-0118%2023:59:00
+	https://integrationapi.net/rest/Sms/Statistics?sessionId=FBHKZT9TBBTUWYUR1PYUTYRAGRLUUG0R8A8Z&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-0118%2023:59:00
 	
 
 Табл. 9. Параметры GET-запроса на формирование статистики за период
