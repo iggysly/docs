@@ -14,8 +14,6 @@ Welcome to Devino documentation!
 3. Ознакомьтесь с интересующей документацией. 
 
 
-* :ref:`user-docs`
-
 .. _user-docs:
 .. toctree::
    :maxdepth: 2
