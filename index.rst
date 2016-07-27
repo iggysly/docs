@@ -21,3 +21,4 @@ Welcome to Devino documentation!
 
    httpapi
    httpapiv2
+   smpp
