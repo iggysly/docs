@@ -23,3 +23,4 @@ Welcome to Devino documentation!
    httpapiv2
    smpp
    smtp
+   modyl1c
