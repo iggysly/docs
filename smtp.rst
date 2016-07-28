@@ -36,62 +36,101 @@ SMTP (EMail2SMS) for SMS
 
 .. warning:: Внимание! Для сообщения электронной почты необходимо указать формат данных: plain text only и кодировку: windows-1251, в           противном случае DEVINO не гарантирует корректность передаваемой информации.
 
-Наименование поля описание
+Наименование поля описание:
 
-UserLogin Логин, присвоенный клиенту
+.. code-block:: json
 
-Password Пароль, присвоенный клиенту
-
-SourceAddress Адрес отправителя, присвоенный Клиенту
-
-PhoneNumber Мобильный телефонный номер получателя SMS-сообщения в международном формате: код страны + код сети + номер телефона. Также возможно указание нескольких номеров получателей (до 20), номера разделяются запятой.
-
-<Текст сообщения> Текст SMS-сообщения
+        UserLogin Логин, присвоенный клиенту
+        Password Пароль, присвоенный клиенту
+        SourceAddress Адрес отправителя, присвоенный Клиенту
+        PhoneNumber Мобильный телефонный номер получателя SMS-сообщения в международном формате: код страны + код сети + номер телефона. Также возможно указание нескольких номеров получателей (до 20), номера разделяются запятой.
+        <Текст сообщения> Текст SMS-сообщения
+        
 
 Пример сообщения с одним получателем:
 
-UserLogin=7284_smuser777
+.. code-block:: json
 
-Password=qwerty12
-
-SourceAddress=My Bank
-
-PhoneNumber=+79161234567
-
-Summa scheta 1038.35 Summa k oplate:1038.26
-
-==|| КОНЕЦ ТЕКСТА ||==
+        UserLogin=7284_smuser777
+        Password=qwerty12
+        SourceAddress=My Bank
+        PhoneNumber=+79161234567
+        Summa scheta 1038.35 Summa k oplate:1038.26
+        ==|| КОНЕЦ ТЕКСТА ||==
+        
 
 Если необходимо отправить сообщение нескольким отправителям, то необходимо ставить "," после номера и следующий начинать опять с "+".
 
-Пример: PhoneNumber=+79151234567,+79161234567,+79031234567
+Пример: 
+
+.. code-block:: json
+
+        PhoneNumber=+79151234567,+79161234567,+79031234567
+        
 
 AddonToEmail2SMS
 ----------------
 
-Дополнительная опция к Email2sms
-Формат тела письма (в одну строку без переноса):
-StartWithPoint;login;password;mobilenumber;sourceaddress;text of message;EndWithPoint
+Дополнительная опция к Email2sms.Формат тела письма (в одну строку без переноса):
+
+.. code-block:: json
+
+        StartWithPoint;login;password;mobilenumber;sourceaddress;text of message;EndWithPoint
+        
+
 Пример:
-StartWithPoint;Ваш логин;Ваш пароль;79001234567;TEL;Привет, мир!;EndWithPoint
+
+.. code-block:: json
+
+        StartWithPoint;Ваш логин;Ваш пароль;79001234567;TEL;Привет, мир!;EndWithPoint
+        
+
 Формат заголовка письма (если текст на латинице):
-Content-Type: text/plain; charset=us-ascii
-Content-Transfer-Encoding: 7bit
+
+.. code-block:: json
+
+        Content-Type: text/plain; charset=us-ascii
+        Content-Transfer-Encoding: 7bit
+        
+
 Формат заголовка письма (если текст на кириллице):
-Content-Type: text/plain; charset=windows-1251
-Content-Transfer-Encoding: quoted-printable
+
+.. code-block:: json
+
+        Content-Type: text/plain; charset=windows-1251
+        Content-Transfer-Encoding: quoted-printable
+        
 
 AddonToEmail2SMS_Base64
 -----------------------
 
-Отправка сообщений через сервис Платформы в кодировке Base64
-Тема письма (регистр символов не имеет значения) должна быть MODEB64
+Отправка сообщений через сервис платформы в кодировке Base64
+Тема письма (регистр символов не имеет значения) должна быть *MODEB64*
 Формат тела письма:
-login;password;mobilenumber;sourceaddress;text of message
+
+.. code-block:: json
+
+        login;password;mobilenumber;sourceaddress;text of message
+        
+
 Пример:
-Ваш логин;Ваш пароль;79001234567;TEL;Привет, мир!
+
+.. code-block:: json
+
+        Ваш логин;Ваш пароль;79001234567;TEL;Привет, мир!
+        
+
 Обращаем Ваше внимание:
-1. Перед отправкой письма убедитесь, что в заголовке Content-Transfer-Encoding установлено base64
-2. Номера телефонов можно указывать через запятую (до 1000 в одном письме),
+
+.. code-block:: json
+
+        1. Перед отправкой письма убедитесь, что в заголовке Content-Transfer-Encoding установлено base64
+        2. Номера телефонов можно указывать через запятую (до 1000 в одном письме),
+        
+
 пример:
-Ваш логин;Ваш пароль;79001234567,79001234567;TEL;Привет мир!
+
+.. code-block:: json
+
+        Ваш логин;Ваш пароль;79001234567,79001234567;TEL;Привет мир!
+        
