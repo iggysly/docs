@@ -24,3 +24,4 @@ Welcome to Devino documentation!
    smpp
    smtp
    modyl1c
+   xml
