@@ -25,3 +25,4 @@ Welcome to Devino documentation!
    smtp
    modyl1c
    xml
+   soap
