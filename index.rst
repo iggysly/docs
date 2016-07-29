@@ -26,3 +26,4 @@ Welcome to Devino documentation!
    modyl1c
    xml
    soap
+   soapv2
