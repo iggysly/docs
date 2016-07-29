@@ -7,13 +7,12 @@ SMTP (EMail2SMS) for SMS
 
 .. code-block:: json
 
-    email2sms@integrationapi.net.
+    email2sms@integrationapi.net
     
 
 Техническая часть
 -----------------
 
-Шаблон сообщения
 
 Тело (текст) сообщения электронной почты должно быть сформировано в соответствии приведенным ниже шаблоном:
 
