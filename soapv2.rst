@@ -137,18 +137,17 @@ WSDL-документ для SOAP доступен по адресу:
           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
           xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
          <soap12:Body>
-         <SendMessageByTimeZone xmlns="http://ws.devinosms.com">
-         <login>string</login>
-         <password>string</password>
-       <sourceAddress>string</sourceAddress>
-         <destinationAddress>string</destinationAddress>
-         <data>string</data>
-       <sendDate>dateTime</sendDate>
-       <validity>int</validity>
-     </SendMessageByTimeZone>
-     </soap12:Body>
-    </soap12:Envelope>
-    </soap12:Envelope>
+            <SendMessageByTimeZone xmlns="http://ws.devinosms.com">
+                 <login>string</login>
+                 <password>string</password>
+                 <sourceAddress>string</sourceAddress>
+                 <destinationAddress>string</destinationAddress>
+                 <data>string</data>
+                 <sendDate>dateTime</sendDate>
+                 <validity>int</validity>
+            </SendMessageByTimeZone>
+          </soap12:Body>
+        </soap12:Envelope>
     
 
 Таблица 2 - Описание параметров SendMessageByTimeZone
