@@ -64,7 +64,7 @@ WSDL-документ для SOAP доступен по адресу:
      <soap:Value>soap:Receiver</soap:Value>
       </soap:Code>
         <soap:Reason>
-        <soap:Text xml:lang="en">
+          <soap:Text xml:lang="en">
         Server was unable to process request. ---
       &gt; Invalid user login or password
      </soap:Text>
@@ -82,12 +82,12 @@ WSDL-документ для SOAP доступен по адресу:
 
     <?xml version="1.0" encoding="utf-8"?>
     <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-     <soap12:Body>
-     <GetBalance xmlns="http://ws.devinosms.com">
-     <login>string</login>
-    <password>string</password>
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+       <soap12:Body>
+         <GetBalance xmlns="http://ws.devinosms.com">
+       <login>string</login>
+      <password>string</password>
      </GetBalance>
      </soap12:Body>
     </soap12:Envelope>
@@ -108,17 +108,17 @@ WSDL-документ для SOAP доступен по адресу:
 .. code-block:: json
 
     HTTP/1.1 200 OK
-    Content-Type: application/soap+xml; charset=utf-8
-    Content-Length: length
-    <?xml version="1.0" encoding="utf-8"?>
-    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-     <soap12:Body>
-     <GetBalanceResponse xmlns="http://ws.devinosms.com">
-     <GetBalanceResult>decimal</GetBalanceResult>
-     </GetBalanceResponse>
-     </soap12:Body>
+      Content-Type: application/soap+xml; charset=utf-8
+      Content-Length: length
+        <?xml version="1.0" encoding="utf-8"?>
+        <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+         <soap12:Body>
+         <GetBalanceResponse xmlns="http://ws.devinosms.com">
+         <GetBalanceResult>decimal</GetBalanceResult>
+       </GetBalanceResponse>
+       </soap12:Body>
     </soap12:Envelope>
     
 Отправка SMS с учетом часового пояса получателя
@@ -130,21 +130,21 @@ WSDL-документ для SOAP доступен по адресу:
 
     POST /smsservicev2.asmx HTTP/1.1
     Host: ws.devinotele.com
-    Content-Type: application/soap+xml; charset=utf-8
-    Content-Length: length
-    <?xml version="1.0" encoding="utf-8"?>
-    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-     <soap12:Body>
-     <SendMessageByTimeZone xmlns="http://ws.devinosms.com">
-     <login>string</login>
-     <password>string</password>
-     <sourceAddress>string</sourceAddress>
-     <destinationAddress>string</destinationAddress>
-     <data>string</data>
-     <sendDate>dateTime</sendDate>
-     <validity>int</validity>
+      Content-Type: application/soap+xml; charset=utf-8
+      Content-Length: length
+        <?xml version="1.0" encoding="utf-8"?>
+        <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+          xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+         <soap12:Body>
+         <SendMessageByTimeZone xmlns="http://ws.devinosms.com">
+         <login>string</login>
+         <password>string</password>
+       <sourceAddress>string</sourceAddress>
+         <destinationAddress>string</destinationAddress>
+         <data>string</data>
+       <sendDate>dateTime</sendDate>
+       <validity>int</validity>
      </SendMessageByTimeZone>
      </soap12:Body>
     </soap12:Envelope>
@@ -191,20 +191,20 @@ WSDL-документ для SOAP доступен по адресу:
 .. code-block:: json
 
     HTTP/1.1 200 OK
-    Content-Type: application/soap+xml; charset=utf-8
-    Content-Length: length
-    <?xml version="1.0" encoding="utf-8"?>
-    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-     <soap12:Body>
-     <SendMessageByTimeZoneResponse xmlns="http://ws.devinosms.com">
+      Content-Type: application/soap+xml; charset=utf-8
+      Content-Length: length
+        <?xml version="1.0" encoding="utf-8"?>
+        <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+         <soap12:Body>
+         <SendMessageByTimeZoneResponse xmlns="http://ws.devinosms.com">
      <SendMessageByTimeZoneResult>
      <string>string</string>
-     <string>string</string>
-     </SendMessageByTimeZoneResult>
-     </SendMessageByTimeZoneResponse>
-     </soap12:Body>
+         <string>string</string>
+         </SendMessageByTimeZoneResult>
+       </SendMessageByTimeZoneResponse>
+       </soap12:Body>
     </soap12:Envelope>
     
 
