@@ -42,7 +42,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 .. code-block:: json
 
-    http://ws.devinotele.com/SmsServicev2.asmx?WSDL.
+    http://ws.devinotele.com/SmsServicev2.asmx?WSDL
     
 
 Точка подключения: 
