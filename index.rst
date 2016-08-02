@@ -28,3 +28,4 @@ Welcome to Devino documentation!
    soap
    soapv2
    ftps
+   1cbitrix
