@@ -31,3 +31,4 @@ Welcome to Devino documentation!
    1cbitrix
    httppriem
    imsi
+   email
