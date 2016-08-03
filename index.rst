@@ -30,3 +30,4 @@ Welcome to Devino documentation!
    ftps
    1cbitrix
    httppriem
+   imsi
