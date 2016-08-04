@@ -14,7 +14,7 @@ Welcome to Devino documentation!
 3. Ознакомьтесь с интересующей документацией. 
 
 
-.. _user-docs:
+.. _sms-docs:
 
 .. toctree::
    :maxdepth: 2
@@ -31,18 +31,23 @@ Welcome to Devino documentation!
    ftps
    1cbitrix
    
+.. _incoming-docs:
+
 .. toctree::
    :maxdepth: 2
    :caption: Входящире сообщения
    
    httppriem
-   
- .. toctree::
+
+.. _imsi-docs:
+
+.. toctree::
    :maxdepth: 2
    :caption: IMSI
    
    imsi
-   
+
+.. _email-docs:   
 .. toctree::
    :maxdepth: 2
    :caption: E-Mail Рассылки
