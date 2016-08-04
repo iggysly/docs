@@ -91,7 +91,7 @@ SMTP API
 Отправка письма из .NET
 -----------------------
 
-.. code-block:: 	
+.. code-block:: json	
 
                 using System;
                 using System.Diagnostics;
