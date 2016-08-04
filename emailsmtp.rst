@@ -93,39 +93,39 @@ SMTP API
 
 .. code-block:: 	
 
-    using System;
-    using System.Diagnostics;
-    using System.Net;
-    using System.Net.Mail;
-    namespace Devino.Email.SmtpClient
-    {
-        class Program
+        using System;
+        using System.Diagnostics;
+        using System.Net;
+        using System.Net.Mail;
+        namespace Devino.Email.SmtpClient
         {
-            static void Main(string[] args)
+            class Program
             {
-                using (var smtpClient = new SmtpClient())
+                static void Main(string[] args)
                 {
-                    var sourceEmail = "noreplay@devinotele.com";
-                    var subject = "Test from smtp";
-                    var messageText = "Привет! <a href=\"http://www.devinotele.com\">Кликни меня</a>";
-                    var email = "test@devinotele.com";
-                     
-                    smtpClient.Host = "integrationapi.net";
-                    smtpClient.Port = 587;
-                    smtpClient.EnableSsl = true;
-                    smtpClient.Credentials = new NetworkCredential("1website", "test");
-                    
-                    var message = new MailMessage(sourceEmail, email) { Sender = new MailAddress(sourceEmail), Subject = subject, Body = messageText };
-                    try
+                    using (var smtpClient = new SmtpClient())
                     {
-                        smtpClient.Send(message);
-                    }
-                    catch (Exception ex)
-                    {
-                        Trace.TraceError(ex.Message);
+                        var sourceEmail = "noreplay@devinotele.com";
+                        var subject = "Test from smtp";
+                        var messageText = "Привет! <a href=\"http://www.devinotele.com\">Кликни меня</a>";
+                        var email = "test@devinotele.com";
+                         
+                        smtpClient.Host = "integrationapi.net";
+                        smtpClient.Port = 587;
+                        smtpClient.EnableSsl = true;
+                        smtpClient.Credentials = new NetworkCredential("1website", "test");
+                        
+                        var message = new MailMessage(sourceEmail, email) { Sender = new MailAddress(sourceEmail), Subject = subject, Body = messageText };
+                        try
+                        {
+                            smtpClient.Send(message);
+                        }
+                        catch (Exception ex)
+                        {
+                            Trace.TraceError(ex.Message);
+                        }
                     }
                 }
             }
         }
-    }
     
