@@ -63,9 +63,9 @@ WSDL-документ для SOAP доступен по адресу:
       xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
        <soap12:Body>
          <GetBalance xmlns="http://ws.devinosms.com">
-       <login>string</login>
-      <password>string</password>
-     </GetBalance>
+            <login>string</login>
+            <password>string</password>
+        </GetBalance>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -89,11 +89,11 @@ WSDL-документ для SOAP доступен по адресу:
       Content-Length: length
         <?xml version="1.0" encoding="utf-8"?>
         <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-          xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-         <soap12:Body>
-         <GetBalanceResponse xmlns="http://ws.devinosms.com">
-         <GetBalanceResult>decimal</GetBalanceResult>
+              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+              xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+                 <soap12:Body>
+             <GetBalanceResponse xmlns="http://ws.devinosms.com">
+            <GetBalanceResult>decimal</GetBalanceResult>
        </GetBalanceResponse>
        </soap12:Body>
     </soap12:Envelope>
@@ -202,21 +202,21 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <SendMessage xmlns="http://ws.devinosms.com">
-     <login>string</login>
-     <password>string</password>
-     <message>
-     <Data>string</Data>
-     <DelayUntilUtc>dateTime</DelayUntilUtc>
-     <DestinationAddresses>
-     <string>string</string>
-     <string>string</string>
-     </DestinationAddresses>
-     <SourceAddress>string</SourceAddress>
-     <ReceiptRequested>boolean</ReceiptRequested>
-     <Validity>int</Validity>
-     </message>
-     </SendMessage>
+         <SendMessage xmlns="http://ws.devinosms.com">
+             <login>string</login>
+             <password>string</password>
+             <message>
+             <Data>string</Data>
+             <DelayUntilUtc>dateTime</DelayUntilUtc>
+             <DestinationAddresses>
+             <string>string</string>
+             <string>string</string>
+         </DestinationAddresses>
+             <SourceAddress>string</SourceAddress>
+         <ReceiptRequested>boolean</ReceiptRequested>
+             <Validity>int</Validity>
+         </message>
+         </SendMessage>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -258,10 +258,10 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
      <SendMessageResponse xmlns="http://ws.devinosms.com">
-     <SendMessageResult>
-     <string>string</string>
-     <string>string</string>
-     </SendMessageResult>
+        <SendMessageResult>
+             <string>string</string>
+             <string>string</string>
+        </SendMessageResult>
       </SendMessageResponse>
      </soap12:Body>
     </soap12:Envelope>
@@ -279,11 +279,11 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <GetMessageState xmlns="http://ws.devinosms.com">
-     <login>string</login>
-     <password>string</password>
-     <messageID>string</messageID>
-     </GetMessageState>
+         <GetMessageState xmlns="http://ws.devinosms.com">
+             <login>string</login>
+             <password>string</password>
+             <messageID>string</messageID>
+         </GetMessageState>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -312,14 +312,14 @@ WSDL-документ для SOAP доступен по адресу:
           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
           xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
           <soap12:Body>
-        <GetMessageStateResponse xmlns="http://ws.devinosms.com">
-        <GetMessageStateResult>
-        <State>int</State>
-        <CreationDateUtc>dateTime</CreationDateUtc>
+            <GetMessageStateResponse xmlns="http://ws.devinosms.com">
+            <GetMessageStateResult>
+                <State>int</State>
+                <CreationDateUtc>dateTime</CreationDateUtc>
           <SubmittedDateUtc>dateTime</SubmittedDateUtc>
           <ReportedDateUtc>dateTime</ReportedDateUtc>
           <StateDescription>string</StateDescription>
-        <Price>decimal</Price>
+         <Price>decimal</Price>
         </GetMessageStateResult>
        </GetMessageStateResponse>
        </soap12:Body>
@@ -360,12 +360,12 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <GetStatistics xmlns="http://ws.devinosms.com">
-     <login>string</login>
-     <password>string</password>
-     <startDateTime>dateTime</startDateTime>
-     <endDateTime>dateTime</endDateTime>
-     </GetStatistics>
+        <GetStatistics xmlns="http://ws.devinosms.com">
+             <login>string</login>
+             <password>string</password>
+             <startDateTime>dateTime</startDateTime>
+             <endDateTime>dateTime</endDateTime>
+        </GetStatistics>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -398,16 +398,16 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <GetStatisticsResponse xmlns="http://ws.devinosms.com">
-     <GetStatisticsResult>
-     <Sent>int</Sent>
-     <Delivered>int</Delivered>
-     <Errors>int</Errors>
-     <InProcess>int</InProcess>
-     <Expired>int</Expired>
-     <Rejected>int</Rejected>
-     </GetStatisticsResult>
-     </GetStatisticsResponse>
+        <GetStatisticsResponse xmlns="http://ws.devinosms.com">
+         <GetStatisticsResult>
+             <Sent>int</Sent>
+             <Delivered>int</Delivered>
+             <Errors>int</Errors>
+             <InProcess>int</InProcess>
+             <Expired>int</Expired>
+             <Rejected>int</Rejected>
+        </GetStatisticsResult>
+        </GetStatisticsResponse>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -442,12 +442,12 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <GetIncomingMessages xmlns="http://ws.devinosms.com">
-     <login>string</login>
-     <password>string</password>
-     <maxDateUTC>dateTime</maxDateUTC>
-     <minDateUTC>dateTime</minDateUTC>
-     </GetIncomingMessages>
+        <GetIncomingMessages xmlns="http://ws.devinosms.com">
+            <login>string</login>
+             <password>string</password>
+             <maxDateUTC>dateTime</maxDateUTC>
+             <minDateUTC>dateTime</minDateUTC>
+        </GetIncomingMessages>
      </soap12:Body>
     </soap12:Envelope>
     
@@ -479,22 +479,22 @@ WSDL-документ для SOAP доступен по адресу:
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
      <soap12:Body>
-     <GetIncomingMessagesResponse xmlns="http://ws.devinosms.com">
-     <GetIncomingMessagesResult>
-     <IncomingMessage>
-     <Data>string</Data>
-     <SourceAddress>string</SourceAddress>
-     <DestinationAddress>string</DestinationAddress>
-     <CreatedDateUtc>dateTime</CreatedDateUtc>
-     </IncomingMessage>
-     <IncomingMessage>
-     <Data>string</Data>
-     <SourceAddress>string</SourceAddress>
-     <DestinationAddress>string</DestinationAddress>
-     <CreatedDateUtc>dateTime</CreatedDateUtc>
-     </IncomingMessage>
-     </GetIncomingMessagesResult>
-     </GetIncomingMessagesResponse>
+        <GetIncomingMessagesResponse xmlns="http://ws.devinosms.com">
+            <GetIncomingMessagesResult>
+                <IncomingMessage>
+                     <Data>string</Data>
+                     <SourceAddress>string</SourceAddress>
+                     <DestinationAddress>string</DestinationAddress>
+                     <CreatedDateUtc>dateTime</CreatedDateUtc>
+                </IncomingMessage>
+                <IncomingMessage>
+                     <Data>string</Data>
+                     <SourceAddress>string</SourceAddress>
+                     <DestinationAddress>string</DestinationAddress>
+                     <CreatedDateUtc>dateTime</CreatedDateUtc>
+                 </IncomingMessage>
+            </GetIncomingMessagesResult>
+         </GetIncomingMessagesResponse>
      </soap12:Body>
     </soap12:Envelope>
     
