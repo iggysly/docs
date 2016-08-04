@@ -29,6 +29,21 @@ Welcome to Devino documentation!
    soapv2
    ftps
    1cbitrix
+   
+   .. toctree::
+   :maxdepth: 2
+   :caption: Входящире сообщения
+   
    httppriem
+   
+   .. toctree::
+   :maxdepth: 2
+   :caption: IMSI
+   
    imsi
+   
+   .. toctree::
+   :maxdepth: 2
+   :caption: E-Mail Рассылки
+   
    email
