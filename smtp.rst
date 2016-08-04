@@ -20,15 +20,15 @@ SMTP (EMail2SMS) for SMS
 
     ==|| НАЧАЛО ТЕКСТА ||==
 
-    UserLogin=<Логин>
-
-    Password=<Пароль>
-
-    SourceAddress=<Адрес отправителя>
-
-    PhoneNumber=<Получатель>
-
-    <Текст сообщения>
+        UserLogin=<Логин>
+    
+        Password=<Пароль>
+    
+        SourceAddress=<Адрес отправителя>
+    
+        PhoneNumber=<Получатель>
+    
+        <Текст сообщения>
 
     ==|| КОНЕЦ ТЕКСТА ||==
     
