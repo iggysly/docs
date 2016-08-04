@@ -121,8 +121,8 @@
 .. code-block:: json
 
     {
-    Code: <Код ошибки>
-    Desc: <”Текст ошибки”>
+        Code: <Код ошибки>
+        Desc: <”Текст ошибки”>
     }
     
 
@@ -131,13 +131,13 @@
 .. code-block:: json
 
     {
-    Code: 9
-    Desc: "The parameters dictionary contains a null entry for parameter
-    'maxDateUtc' of non-nullable type 'DateTime' for method
-    'System.Web.Mvc.ActionResult In(System.String, DateTime, DateTime)' in
-    'RestService.Controllers.SmsController'. An optional parameter must be a
-    reference type, a nullable type, or be declared as an optional parameter.
-    Parameter name: parameters"
+        Code: 9
+        Desc: "The parameters dictionary contains a null entry for parameter
+        'maxDateUtc' of non-nullable type 'DateTime' for method
+        'System.Web.Mvc.ActionResult In(System.String, DateTime, DateTime)' in
+        'RestService.Controllers.SmsController'. An optional parameter must be a
+        reference type, a nullable type, or be declared as an optional parameter.
+        Parameter name: parameters"
     }
     
 
