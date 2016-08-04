@@ -189,8 +189,7 @@ API Сервиса отправки SMS-сообщений организова�
 
 .. code-block:: json
 
-	https://integrationapi.net/rest/Sms/Send?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&
-	DestinationAddress=<Номер получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>  
+	https://integrationapi.net/rest/Sms/Send?SessionID=<Идентификатор сессии>&SourceAddress=<Адрес отправителя>&	DestinationAddress=<Номер получателя>&Data=<Текст сообщения>&Validity=<Время жизни сообщения>  
 	
 
 Ниже приведен пример запроса: 
@@ -611,8 +610,8 @@ API Сервиса отправки SMS-сообщений организова�
 
 
 	{  
-	Code: 1,
-	Desc: "MessageID can not be null or empty Parameter name: messageId" 
+		Code: 1,
+		Desc: "MessageID can not be null or empty Parameter name: messageId" 
 	}
 	 
 
