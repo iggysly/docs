@@ -15,6 +15,7 @@ Welcome to Devino documentation!
 
 
 .. _user-docs:
+
 .. toctree::
    :maxdepth: 2
    :caption: SMS Рассылки
@@ -30,19 +31,19 @@ Welcome to Devino documentation!
    ftps
    1cbitrix
    
-   .. toctree::
+.. toctree::
    :maxdepth: 2
    :caption: Входящире сообщения
    
    httppriem
    
-   .. toctree::
+ .. toctree::
    :maxdepth: 2
    :caption: IMSI
    
    imsi
    
-   .. toctree::
+.. toctree::
    :maxdepth: 2
    :caption: E-Mail Рассылки
    
