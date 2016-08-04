@@ -52,4 +52,5 @@ Welcome to Devino documentation!
    :maxdepth: 2
    :caption: E-Mail Рассылки
    
-   email
+   emailsmtp
+   emailhttp
