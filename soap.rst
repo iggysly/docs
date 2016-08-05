@@ -61,7 +61,7 @@ WSDL-документ для SOAP доступен по адресу:
 данных, передаваемых сервису, в POST-запросе следующего формата.
 Пример запроса: 
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8"?>
     <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -92,7 +92,7 @@ WSDL-документ для SOAP доступен по адресу:
 **Пример ответа.** В случае успешного прохождения аутентификации присланных данных Сервис отправки SMS
 пришлет ответ со следующими параметрами:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -115,7 +115,7 @@ WSDL-документ для SOAP доступен по адресу:
 Сервис возвращает значение баланса авторизованного пользователя по SessionID. Овердрафт при этом
 учитывается. Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8"?>
   <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -141,7 +141,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -165,7 +165,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   POST /smsservice.asmx HTTP/1.1
   Host: ws.devinotele.com
@@ -226,7 +226,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -253,7 +253,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   POST /smsservice.asmx HTTP/1.1
   Host: ws.devinotele.com
@@ -304,7 +304,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -332,7 +332,7 @@ messageID.
 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8"?>
   <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -360,7 +360,7 @@ messageID.
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -409,7 +409,7 @@ messageID.
 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   POST /smsservice.asmx HTTP/1.1
   Host: ws.devinotele.com
@@ -446,7 +446,7 @@ messageID.
 После получения запроса сервис проверит валидность присланного идентификатора сессии и даты начала/окончания формирования статистики (включая ограничение на то, что охватываемый диапазон должен не превышать 3 месяцев).
 Если все проверки пройдены успешно, то сервис вернет статистику по sms со следующими параметрами: 
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
@@ -495,7 +495,7 @@ messageID.
 личный кабинет. 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
   Сервис возвращает входящие сообщения пользователя в интервале maxDate, minDate(который передан в этом запросе).
   <?xml version="1.0" encoding="utf-8"?>
@@ -527,7 +527,7 @@ messageID.
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
   HTTP/1.1 200 OK
   Content-Type: application/soap+xml; charset=utf-8
