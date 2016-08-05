@@ -12,7 +12,11 @@ API предоставляет удобный интерфейс для авто
 
 API поддерживает базовую авторизацию через заголовок Authorization (https://en.wikipedia.org/wiki/Basic_access_authentication). В заголовке запроса необходимо передать логин и пароль из Личного Кабинета в формате login:password в base64 кодировке.
 
-*Authorization: Basic dGVzdGVyOjExMTExMQ==*
+.. code-block:: json
+
+                *Authorization: Basic dGVzdGVyOjExMTExMQ==*
+                
+
 
 Формат запроса
 --------------
@@ -351,7 +355,10 @@ ContactGroupDto:
 Получение аттачей рассылки
 --------------------------
 
-**GET /EmailApi/Tasks/{TaskId}/Attachments**
+.. code-block:: json
+
+                **GET /EmailApi/Tasks/{TaskId}/Attachments**
+                
 
 Получение аттачей по идентификатору рассылки. В качестве результата возвращается список аттачей.
 
