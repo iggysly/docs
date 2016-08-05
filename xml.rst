@@ -28,7 +28,7 @@ https://xmlapi.devinotele.com/Send.ashx
 
  Пример запроса: 
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8" ?>
   <package login="login" password="123456">
@@ -73,7 +73,7 @@ https://xmlapi.devinotele.com/Send.ashx
 
 Пример ответа: 
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8" ?>
   <package>
@@ -104,7 +104,7 @@ https://xmlapi.devinotele.com/Statistics.ashx
 
 Пример запроса: 
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8" ?>
   <package login="login" password="123456">
@@ -132,7 +132,7 @@ https://xmlapi.devinotele.com/Statistics.ashx
 
 Пример ответа: 
 
-.. code-block:: json
+.. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8" ?>
   <package>
@@ -176,7 +176,7 @@ https://xmlapi.devinotele.com/Statistics.ashx
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
    <?xml version="1.0" encoding="utf-8" ?>
    <package>
