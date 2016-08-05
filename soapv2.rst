@@ -35,7 +35,7 @@ WSDL-документ для SOAP доступен по адресу:
 В случае возникновения исключительной ситуации во время обработки запроса или ошибки
 аутентификации, сервис возвращает код ошибки в виде:
 
-.. code-block:: json
+.. code-block:: xml
 
     <soap:Code>
      <soap:Value>soap:Receiver</soap:Value>
@@ -55,7 +55,7 @@ WSDL-документ для SOAP доступен по адресу:
 этом учитывается.
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     <?xml version="1.0" encoding="utf-8"?>
     <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -82,7 +82,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Сервис проверяет валидность Login/Password и, в случае успеха, авторизует Пользователя и в ответе присылает баланс пользователя следующего вида. Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
       Content-Type: application/soap+xml; charset=utf-8
@@ -103,7 +103,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Для того чтобы сообщение получателю было доставлено в срок, задается отложенная отправка SendMessageByTimeZone. Часовой пояс вычисляется на основе номера получателя и, в зависимости от него, сообщение отправляется через заданный временной интервал, чтобы осуществилась доставка по местному времени получателя. Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     POST /smsservicev2.asmx HTTP/1.1
     Host: ws.devinotele.com
@@ -164,7 +164,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Если все проверки пройдены успешно, то Сервис отправит сообщение в SMS-центр и вернет идентификатор отправленного сообщения с параметрами как в примере ответа. Размер 1 сообщения составляет: 70 русских символов или 160 символов латиницей. Сервис может возвратить более 1 идентификатора, если текст сообщения выходит за пределы 1 sms. Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
       Content-Type: application/soap+xml; charset=utf-8
@@ -191,7 +191,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     POST /smsservicev2.asmx HTTP/1.1
     Host: ws.devinotele.com
@@ -247,7 +247,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
     Content-Type: application/soap+xml; charset=utf-8
@@ -272,7 +272,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Сервис возвращает статус отправленного sms в соответствии со значениями параметров по Login/Password и messageID. Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     <?xml version="1.0" encoding="utf-8"?>
     <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -302,7 +302,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
       Content-Type: application/soap+xml; charset=utf-8
@@ -349,7 +349,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Сервис возвращает статистику по SMS-рассылкам за период, в соответствии со значениями параметров, передаваемых сервису в POST-запросе следующего формата. Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     POST /smsservicev2.asmx HTTP/1.1
     Host: ws.devinotele.com
@@ -388,7 +388,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 После получения запроса сервис проверит валидность присланного по Login/Password и даты начала/окончания формирования статистики (включая ограничение на то, что охватываемый диапазон должен не превышать 3 месяцев). Если все проверки пройдены успешно, то сервис вернет статистику по sms со следующими параметрами:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
     Content-Type: application/soap+xml; charset=utf-8
@@ -435,7 +435,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Система позволяет заводить входящие номера и на них получать sms. Входящий номер заводится через личный кабинет. Сервис возвращает входящие сообщения пользователя в интервале maxDate minDate(который передан в этом запросе). Пример запроса:
 
-.. code-block:: json
+.. code-block:: xml
 
     <?xml version="1.0" encoding="utf-8"?>
     <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -469,7 +469,7 @@ WSDL-документ для SOAP доступен по адресу:
 
 Пример ответа:
 
-.. code-block:: json
+.. code-block:: xml
 
     HTTP/1.1 200 OK
     Content-Type: application/soap+xml; charset=utf-8
