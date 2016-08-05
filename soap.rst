@@ -44,11 +44,11 @@ WSDL-документ для SOAP доступен по адресу:
    <soap:Value>soap:Receiver</soap:Value>
     </soap:Code>
      <soap:Reason>
-    <soap:Text xml:lang="en">
-    Server was unable to process request. ---
-     &gt; Invalid user login or password
-    </soap:Text>
-  </soap:Reason>
+        <soap:Text xml:lang="en">
+        Server was unable to process request. ---
+        &gt; Invalid user login or password
+        </soap:Text>
+      </soap:Reason>
 
 Аутентификация
 --------------
@@ -236,12 +236,12 @@ WSDL-документ для SOAP доступен по адресу:
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
    <soap12:Body>
-   <SendMessageByTimeZoneResponse xmlns="http://ws.devinosms.com">
-    <SendMessageByTimeZoneResult>
-      <string>string</string>
-      <string>string</string>
+      <SendMessageByTimeZoneResponse xmlns="http://ws.devinosms.com">
+        <SendMessageByTimeZoneResult>
+          <string>string</string>
+          <string>string</string>
         </SendMessageByTimeZoneResult>
-        </SendMessageByTimeZoneResponse>
+      </SendMessageByTimeZoneResponse>
     </soap12:Body>
   </soap12:Envelope>
   
@@ -371,15 +371,15 @@ messageID.
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
    <soap12:Body>
     <GetMessageStateResponse xmlns="http://ws.devinosms.com">
-     <GetMessageStateResult>
-   <State>int</State>
+      <GetMessageStateResult>
+        <State>int</State>
         <CreationDateUtc>dateTime</CreationDateUtc>
-      <SubmittedDateUtc>dateTime</SubmittedDateUtc>
-      <ReportedDateUtc>dateTime</ReportedDateUtc>
-      <StateDescription>string</StateDescription>
-       <Price>decimal</Price>
+        <SubmittedDateUtc>dateTime</SubmittedDateUtc>
+        <ReportedDateUtc>dateTime</ReportedDateUtc>
+        <StateDescription>string</StateDescription>
+        <Price>decimal</Price>
      </GetMessageStateResult>
-   </GetMessageStateResponse>
+    </GetMessageStateResponse>
    </soap12:Body>
   </soap12:Envelope>
   
@@ -457,14 +457,14 @@ messageID.
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
    <soap12:Body>
    <GetStatisticsResponse xmlns="http://ws.devinosms.com">
-    <GetStatisticsResult>
-      <Sent>int</Sent>
-         <Delivered>int</Delivered>
-         <Errors>int</Errors>
-         <InProcess>int</InProcess>
-         <Expired>int</Expired>
-          <Rejected>int</Rejected>
-            </GetStatisticsResult>
+      <GetStatisticsResult>
+        <Sent>int</Sent>
+        <Delivered>int</Delivered>
+        <Errors>int</Errors>
+        <InProcess>int</InProcess>
+        <Expired>int</Expired>
+        <Rejected>int</Rejected>
+      </GetStatisticsResult>
     </GetStatisticsResponse>
    </soap12:Body>
   </soap12:Envelope>
@@ -538,19 +538,19 @@ messageID.
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
   <soap12:Body>
    <GetIncomingMessagesResponse xmlns="http://ws.devinosms.com">
-    <GetIncomingMessagesResult>
-      <IncomingMessage>
-      <Data>string</Data>
-      <SourceAddress>string</SourceAddress>
-       <DestinationAddress>string</DestinationAddress>
-       <CreatedDateUtc>dateTime</CreatedDateUtc>
-     </IncomingMessage>
-    <IncomingMessage>
-     <Data>string</Data>
-     <SourceAddress>string</SourceAddress>
-     <DestinationAddress>string</DestinationAddress>
-     <CreatedDateUtc>dateTime</CreatedDateUtc>
-     </IncomingMessage>
+      <GetIncomingMessagesResult>
+        <IncomingMessage>
+          <Data>string</Data>
+          <SourceAddress>string</SourceAddress>
+          <DestinationAddress>string</DestinationAddress>
+          <CreatedDateUtc>dateTime</CreatedDateUtc>
+        </IncomingMessage>
+        <IncomingMessage>
+          <Data>string</Data>
+          <SourceAddress>string</SourceAddress>
+          <DestinationAddress>string</DestinationAddress>
+          <CreatedDateUtc>dateTime</CreatedDateUtc>
+        </IncomingMessage>
       </GetIncomingMessagesResult>
     </GetIncomingMessagesResponse>
    </soap12:Body>
