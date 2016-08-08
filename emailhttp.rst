@@ -364,10 +364,7 @@ ContactGroupDto:
 Получение аттачей рассылки
 --------------------------
 
-.. code-block:: json
-
-                **GET /EmailApi/Tasks/{TaskId}/Attachments**
-                
+**GET /EmailApi/Tasks/{TaskId}/Attachments**
 
 Получение аттачей по идентификатору рассылки. В качестве результата возвращается список аттачей.
 
