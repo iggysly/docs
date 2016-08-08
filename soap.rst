@@ -42,13 +42,13 @@ WSDL-документ для SOAP доступен по адресу:
 
   <soap:Code>
    <soap:Value>soap:Receiver</soap:Value>
-    </soap:Code>
-     <soap:Reason>
-        <soap:Text xml:lang="en">
+  </soap:Code>
+  <soap:Reason>
+    <soap:Text xml:lang="en">
         Server was unable to process request. ---
         &gt; Invalid user login or password
-        </soap:Text>
-      </soap:Reason>
+    </soap:Text>
+  </soap:Reason>
 
 Аутентификация
 --------------
@@ -64,7 +64,7 @@ WSDL-документ для SOAP доступен по адресу:
 .. code-block:: xml
 
   <?xml version="1.0" encoding="utf-8"?>
-    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
       <soap12:Body>
@@ -263,22 +263,22 @@ WSDL-документ для SOAP доступен по адресу:
   <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-   <soap12:Body>
-   <SendMessage xmlns="http://ws.devinosms.com">
-    <sessionID>string</sessionID>
-    <message>
-    <Data>string</Data>
-   <DelayUntilUtc>dateTime</DelayUntilUtc>
-         <DestinationAddresses>
-         <string>string</string>
-         <string>string</string>
-         </DestinationAddresses>
-         <SourceAddress>string</SourceAddress>
-         <ReceiptRequested>boolean</ReceiptRequested>
-      <Validity>int</Validity>
+  <soap12:Body>
+    <SendMessage xmlns="http://ws.devinosms.com">
+      <sessionID>string</sessionID>
+      <message>
+          <Data>string</Data>
+          <DelayUntilUtc>dateTime</DelayUntilUtc>
+          <DestinationAddresses>
+            <string>string</string>
+            <string>string</string>
+          </DestinationAddresses>
+          <SourceAddress>string</SourceAddress>
+          <ReceiptRequested>boolean</ReceiptRequested>
+          <Validity>int</Validity>
       </message>
     </SendMessage>
-   </soap12:Body>
+  </soap12:Body>
   </soap12:Envelope>
   
 
