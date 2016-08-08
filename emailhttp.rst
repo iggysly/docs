@@ -51,7 +51,9 @@ API поддерживает базовую авторизацию через з
 
 .. code-block:: json
   
-      {    "Result":{
+      {    
+        "Result":
+          {
               ...
           },
           "Code": "not_found",
@@ -193,10 +195,12 @@ TaskType
 .. code-block:: json
 
         {
-            "Result":{
+            "Result":
+            {
                 "Login": "login",
                 "Name": "name",
-                "Sender":{
+                "Sender": 
+                {
                     "Address": "xxx@gmail.com",
                     "Name": "sendername"
                 },
@@ -317,10 +321,12 @@ ContactGroupDto:
             "Text":"test [Unsubscribe][WebVersion]",
             "StartDateTime":"08/31/2015 13:30:38",
             "UserCampaignId":"",
-            "Contacts":[
+            "Contacts":
+            [
                 {"Id":63090111,"Included":true}
             ]
-            "ContactGroups":[
+            "ContactGroups":
+            [
                 {"Id":252,"Included":true},
                 {"Id":234,"Included":true}
             ]
@@ -333,7 +339,8 @@ ContactGroupDto:
 .. code-block:: 
 
         {
-            "Result":{
+            "Result":
+            {
                 "TaskId": 133875,
                 "TotalContacts": 1,
                 "Dublicates": 0,
@@ -388,7 +395,8 @@ ContactGroupDto:
 .. code-block:: 
 
         {
-            "Result":[
+            "Result":
+            [
                 {
                     "FileName": "3652099d-972d-4377-98e7-e857fa6de441_FALSE.jpg",
                     "Data": "/9j/4AAQSkZJRgABAQAAAQABAA1r52BNh5ry8gwn/2Q==",
