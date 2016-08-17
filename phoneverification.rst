@@ -19,7 +19,6 @@
 Код с описанием - эта часть присутствует во всех ответах. В качестве описания возвращается описание ошибки.
 
 .. code-block:: json
-
 {
 	"Code": "0",
 	"Description": "Code Sent"
@@ -62,7 +61,6 @@ https://phoneverification.devinotele.com/GenerateCode
 Пример запроса:
 
 .. code-block:: json
-
 {
 	"DestinationNumber":"79169492211", 
 	"IMSICode": "D92C2B0A1D5C64BBA8DD8BCE43C4BA11"
@@ -71,7 +69,6 @@ https://phoneverification.devinotele.com/GenerateCode
 Пример ответа:
 
 .. code-block:: json
-
 {
 	"Code": "0",
 	"Description": "Code Sent"
