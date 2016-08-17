@@ -35,7 +35,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Входящире сообщения
+   :caption: Входящие сообщения
    
    httppriem
 
@@ -46,6 +46,12 @@
    :caption: IMSI
    
    imsi
+
+.. toctree::
+   :maxdepth: 2
+   :caption: PhoneVerification
+   
+   phoneverification
 
 .. _email-docs:   
 .. toctree::
