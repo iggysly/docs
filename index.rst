@@ -47,9 +47,11 @@
    
    imsi
 
+
+.. _phoneverification-docs:
 .. toctree::
    :maxdepth: 2
-   :caption: PhoneVerification
+   :caption: Сервис двухфакторной аутентификации
    
    phoneverification
 
