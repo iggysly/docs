@@ -20,10 +20,10 @@
 
 .. code-block:: json
 
-{
-	"Code": "0",
-	"Description": "Code Sent"
-}
+	{
+		"Code": "0",
+		"Description": "Code Sent"
+	}
 
 Все коды отличные от 0, считаются ошибками, информация о которых, содержится в поле Description.
 
@@ -62,18 +62,20 @@ https://phoneverification.devinotele.com/GenerateCode
 Пример запроса:
 
 .. code-block:: json
-{
-	"DestinationNumber":"79169492211", 
-	"IMSICode": "D92C2B0A1D5C64BBA8DD8BCE43C4BA11"
-}
+
+	{
+		"DestinationNumber":"79169492211", 
+		"IMSICode": "D92C2B0A1D5C64BBA8DD8BCE43C4BA11"
+	}
 
 Пример ответа:
 
 .. code-block:: json
-{
-	"Code": "0",
-	"Description": "Code Sent"
-}
+
+	{
+		"Code": "0",
+		"Description": "Code Sent"
+	}
 
 Список кодов ответов:
 
@@ -118,18 +120,20 @@ https://phoneverification.devinotele.com/CheckCode
 Пример запроса:
 
 .. code-block:: json
-{
-	"DestinationNumber":"79169492283", 
-	"Code": "17565"
-}
+
+	{
+		"DestinationNumber":"79169492283", 
+		"Code": "17565"
+	}
 
 Пример ответа:
 
 .. code-block:: json
-{
-	"Code": 0,
-	"Description": "Valid Code"
-}
+
+	{
+		"Code": 0,
+		"Description": "Valid Code"
+	}
 
 Список кодов ответов:
 
