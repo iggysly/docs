@@ -1,5 +1,5 @@
-HTTP (REST) API Без SessionID
-=============================
+HTTP API Без SessionID
+======================
 
 Обзор API
 ---------
