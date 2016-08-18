@@ -1,4 +1,4 @@
-# Документация Devino Telecom
+# Документация API Devino Telecom
 
 **SMS-Рассылки**
 
