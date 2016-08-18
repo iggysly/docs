@@ -1,5 +1,4 @@
-# docs
-Документация Devino Telecom
+# Документация Devino Telecom
 
 **SMS-Рассылки**
 
