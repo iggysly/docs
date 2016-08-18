@@ -310,7 +310,7 @@ ContactGroupDto:
 
 Пример запроса:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Name":"name",
@@ -338,7 +338,7 @@ ContactGroupDto:
 
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Result":
@@ -391,7 +391,7 @@ ContactGroupDto:
 
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Result":
@@ -441,7 +441,7 @@ ContactGroupDto:
 
 Пример запроса:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "FileName":"false.jpg",
@@ -451,7 +451,7 @@ ContactGroupDto:
 
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Code": "ok",
@@ -468,7 +468,7 @@ ContactGroupDto:
 
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Code": "ok",
@@ -518,14 +518,14 @@ TaskState:
 
 Пример запроса:
 
-.. code-block:: 
+.. code-block:: json
 
         {"State":1}
         
  
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Code": "ok",
@@ -542,7 +542,7 @@ TaskState:
 
 Валидируются:
 
-.. code-block:: 
+.. code-block:: json
 
         текст - на отсутствие стоп-слов (нецензурная лексика)
         тема - на отсутствие стоп-слов
@@ -589,7 +589,7 @@ AttachmentDto:
 
 Пример запроса:
 
-.. code-block:: 
+.. code-block:: json
 
         {
            "Sender": {"Address":"test@test.com","Name":"name"},
@@ -602,7 +602,7 @@ AttachmentDto:
 
 Пример ответа:
 
-.. code-block:: 
+.. code-block:: json
 
         {
             "Result": "kaAtrHbZ72",
