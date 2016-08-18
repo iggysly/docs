@@ -19,14 +19,14 @@ WSDL-документ для SOAP доступен по адресу:
 
 .. code-block:: json
 
-    http://ws.devinotele.com/SmsServicev2.asmx?WSDL
+    https://ws.devinotele.com/SmsServicev2.asmx?WSDL
     
 
 Точка подключения: 
 
 .. code-block:: json
 
-    http://ws.devinotele.com/SmsServicev2.asmx
+    https://ws.devinotele.com/SmsServicev2.asmx
     
 
 .. warning:: Все запросы необходимо выполнять в кодировке UTF-8. Количество запросов 10 запросов/1 сек
