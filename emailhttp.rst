@@ -1,4 +1,4 @@
-HTTP API
+EMAIL HTTP API
 ========
 
 Обзор
