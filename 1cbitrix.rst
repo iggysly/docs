@@ -1,7 +1,7 @@
 Модуль SMS рассылки с 1С Битрикс
 ================================
 
-Для установки модуля необходимо перейти в Каталог решений на Marketplace как показано на скриншоте, либо перейти по ссылке: https://marketplace.1cbitrix.ru/solutions/imaginweb.sms/#tab-install-link
+Для установки модуля необходимо перейти в Каталог решений на Marketplace как показано на скриншоте, либо перейти по ссылке: https://marketplace.1c-bitrix.ru/solutions/imaginweb.sms/
 
 .. image:: /img/1111.jpg
 
