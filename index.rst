@@ -54,6 +54,15 @@
    :caption: Сервис двухфакторной аутентификации
    
    phoneverification
+   
+   
+.. _phoneverification-docs:
+.. toctree::
+   :maxdepth: 2
+   :caption: Viber
+   
+   viber-resender
+
 
 .. _email-docs:   
 .. toctree::
