@@ -1,4 +1,4 @@
-Viber-Resender
+Viber-HTTP API
 ==============
 
 Общие сведения
