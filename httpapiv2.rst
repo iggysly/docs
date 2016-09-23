@@ -565,7 +565,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/Sms/In?sessionId=Z5CYSZEKDL1DPICU37WEHQVOYKP0T1GSLHX1&minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
+  https://integrationapi.net/rest/Sms/In?Login=test_login&Password=test123&minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
 
 
 Табл. 8. Параметры GET-запроса на получение сообщений за период  
@@ -663,7 +663,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/Sms/Statistics?sessionId=FBHKZT9TBBTUWYUR1PYUTYRAGRLUUG0R8A8Z&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-0118%2023:59:00
+  https://integrationapi.net/rest/Sms/Statistics?Login=test_login&Password=test123&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-0118%2023:59:00
 
 
 Табл. 9. Параметры GET-запроса на формирование статистики за период  
