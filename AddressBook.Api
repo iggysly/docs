@@ -1,0 +1,10 @@
+Описание
+Сервис предназначен для скрытия деталей реализации адресной книги от остальных частей системы и для предоставления пользователям и внутренним интеграциям удобного интерфейса для управления списками контактов. 
+Список адресов: 
+http://10.3.153.103/AddressbookApi - тест
+http://services-web01.devinoprod.local:9009/ - первый инстанс
+http://services-web02.devinoprod.local:9009/ - второй инстанс
+http://services-web03.devinoprod.local:9009/ - третий инстанс
+http://addressbookapi.devinoprod.local:9009/ - внутренний урл
+https://integrationapi.net/addressbook/v1 - внешний урл
+Юзер для внутреннего апи - AddressBookUser.
