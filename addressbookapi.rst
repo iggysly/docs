@@ -7,7 +7,8 @@ Devino AddressBook Api
 Сервис представляет собой удобный интерфейс для управления списками контактов адресной книги  и получения списка отписавшихся 
 от рассылок.
 
-**Список методов:**
+Список методов:
+~~~~~~~~~~~~~~~
 
     1. Набор методов для работы с группами контактов - ContactGroups.
 
@@ -60,7 +61,8 @@ Devino AddressBook Api
 * Параметров запроса в кодировке UTF-8. Сервис реализован с использованием технологии ServiceStack, что позволяет передавать 
 параметры в следующих форматах: XML, JSON, JSV, CSV.
 
-**Авторизация**
+Авторизация
+-----------
 
 Для доступа к сервису необходимо пройти авторизацию. Сервис поддерживает базовую авторизацию через заголовок Authorization 
 (https://en.wikipedia.org/wiki/Basic_access_authentication):
@@ -71,7 +73,7 @@ Devino AddressBook Api
     
 В заголовке необходимо передать логин и пароль из ЛК (https://my.devinotele.com) в формате login:password в base64 кодировке.
 
-**Ответ API состоит из 2х частей:**
+Ответ API состоит из 2х частей:
 
     1. Код с описанием - эта часть присутствует во всех ответах. В качестве описания возвращается user-friendly описание ошибки.
     2. Result, специфичный для каждого запроса. Может отсутствовать.
@@ -90,7 +92,8 @@ Devino AddressBook Api
 Набор кодов ограничен, а набор описаний зависит от конкретного метода. Код можно использовать для проверки  статуса запроса, а описание предназначено для диагностики возможных проблем человеком. 
 Описание может быть изменено в новой версии API без предупреждения о нарушении обратной совместимости. Набор кодов также может быть  расширен.
 
-**Локализация**
+Локализация
+-----------
 
 В поле Description может возвращаться локализованная строка с текстом ошибки. Для этого необходимо передать заголовок Accept-Language с  нужным языком. В текущей версии поддерживаются русский и английский языки. По умолчанию, если заголовок не передан или язык не найден  среди доступных возвращаются ответы на английском.
 
@@ -99,7 +102,8 @@ Devino AddressBook Api
     Accept-Language: ru-RU
     
 
-**Запрос диапазонов**
+Запрос диапазонов
+-----------------
 
 Некоторые запросы предполагают возвращение только части данных. Для таких запросов необходимо передавать специальный заголовок:
 
@@ -115,7 +119,8 @@ Devino AddressBook Api
 
 При отсутствии заголовка данные запросы возвращают ошибку validation_error с http кодом 416 RequestedRangeNotSatisfiable.
 
-**Список кодов ответов**
+Список кодов ответов
+--------------------
 
 +------------------+------------------+---------------------------------------------------------+
 |      Код         | Http StatusCode  | Расшифровка                                             |
@@ -133,24 +138,28 @@ ContactGroups
 ContactGroups GET (all)
 -----------------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups 
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups 
+        
+
 Метод возвращает список всех групп контактов пользователя. Возвращаемый результат - список объектов типа ContactGroupDto.
 
 **Возвращаемый результат - список записей ContactGroupDto**
 
-+----------------+------------+----------------------------------------------+
-|  Параметр      | Тип данных |    Описание                                  |
-+================+============+==============================================+
-| ContactGroupId |   int      | Идентификатор группы                         |
-+----------------+------------+----------------------------------------------+
-| /Unsubscribed  |   GET      | Получение диапазона отписавшихся             |
-+----------------+------------+----------------------------------------------+
-| /Unsubscribed  |   GET      | Получение диапазона отписавшихся             |
-+----------------+------------+----------------------------------------------+
-| /Unsubscribed  |   GET      | Получение диапазона отписавшихся             |
-+----------------+------------+----------------------------------------------+
-| /Unsubscribed  |   GET      | Получение диапазона отписавшихся             |
-+----------------+------------+----------------------------------------------+
++----------------+------------+--------------------------------+
+|  Параметр      | Тип данных |    Описание                    |
++================+============+================================+
+| ContactGroupId |   int      | Идентификатор группы           |
++----------------+------------+--------------------------------+
+| Name           |   string   | Имя группы                     |
++----------------+------------+--------------------------------+
+| Description    |   string   | Описание группы                |
++----------------+------------+--------------------------------+
+| CreatedDate    |   DateTime | Дата создания                  |
++----------------+------------+--------------------------------+
+| ContactsCount  |   int      | Количество контактов в группе  |
++----------------+------------+--------------------------------+
 
 **Пример ответа:**
 
@@ -181,7 +190,11 @@ https://integrationapi.net/addressbook/v1/ContactGroups
 ContactGroups GET
 -----------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        
+
 Метод возвращает группу по идентификатору. В качестве Result возвращается объект ContactGroupDto, описание см. выше.
 
 **Параметры запроса**
@@ -212,7 +225,11 @@ https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
 ContactGroups POST
 ------------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups
+        
+
 Метод добавляет новую группу контактов. Если группа была успешно добавлена, возвращается код "ok" и http код 201. Метод возвращает 
 идентификатор группы ContactGroupId в качестве Result.
 
@@ -247,8 +264,11 @@ https://integrationapi.net/addressbook/v1/ContactGroups
 ContactGroups PUT
 -----------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
- 
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        
+
 Метод обновляет имя и описание группы, затирая старые значения, возвращается только стандартный ответ, без поля Result.
 
 **Параметры запроса**
@@ -283,7 +303,11 @@ https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
 ContactGroups DELETE
 --------------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        
+
 Метод удаляет группу, возвращается только стандартный ответ, без поля Result.
 
 **Параметры запроса:**
@@ -304,9 +328,14 @@ https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
     }
     
 
-**ContactGroups POST (contacts import)**
+ContactGroups POST (contacts import)
+------------------------------------
 
-https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}/Contacts
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}/Contacts
+        
+
 Метод импортирует пачку контактов. Если контакты были успешно добавлены, возвращается код "ok" и http код 201. 
 Метод возвращает счётчики добаленных контактов в качестве Result.
 
@@ -440,7 +469,11 @@ Contacts
 Contacts GET (query)
 --------------------
 
-https://integrationapi.net/addressbook/v1/Contacts?Query={Key}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Contacts?Query={Key}
+        
+
 Метод возвращает контакты по ключу, в качестве ключа может выступать email или номер телефона. Возвращаемый результат - список объектов типа ContactDto. Также необходимо задать диапазон возвращаемых записей.
 
 **Параметры запроса:**
@@ -515,7 +548,11 @@ https://integrationapi.net/addressbook/v1/Contacts?Query={Key}
 Contacts GET
 ------------
 
-https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        
+
 Метод возвращает контакт по идентификатору, в качестве Result возвращается объект ContactDto, описание см. выше.
 
 **Параметры запроса:**
@@ -552,7 +589,11 @@ https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
 Contacts POST
 -------------
 
-https://integrationapi.net/addressbook/v1/Contacts
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Contacts
+        
+
 Метод создаёт контакт. Если контакт был успешно создан, возвращается код "ok" и http код 201. В качестве Result возвращается идентификатор контакта.
 
 Валидируются:
@@ -623,7 +664,11 @@ https://integrationapi.net/addressbook/v1/Contacts
 Contacts PATCH
 --------------
 
-https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        
+
 Метод обновляет контакт. (PATCH по идеологии аналогичен PUT, с той лишь разницей, что PUT полностью заменяет ресурс, а PATCH меняет только те параметры, которые переданы.)
 Валидация идентична методу Contacts POST, исключается только проверка наличия группы, так как её менять нельзя. Возвращается только стандартный ответ, без поля Result.
 
@@ -683,7 +728,11 @@ https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
 Contacts DELETE
 ---------------
 
-https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        
+
 Метод удаляет контакт, возвращается только стандартный ответ, без поля Result.
 
 **Параметры запроса:**
@@ -710,7 +759,11 @@ Unsubscribed
 Unsubscribed GET
 ----------------
 
-https://integrationapi.net/addressbook/v1/Unsubscribed?TaskId={TaskId}
+.. code-block:: json
+
+        https://integrationapi.net/addressbook/v1/Unsubscribed?TaskId={TaskId}
+        
+        
 Метод возвращает список отписавшихся от email рассылок. Можно получить список отписавшихся от определённой рассылки, для этого  предусмотрен параметр taskId. Возвращаемый результат - список объектов типа UnsubscribedDto. Также необходимо задать диапазон возвращаемых записей.
 
 **Параметры запроса:**
