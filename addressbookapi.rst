@@ -1,4 +1,4 @@
-DEVINO.AddressBook.Api
+Devino AddressBook Api
 ======================
 
 Описание
