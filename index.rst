@@ -56,13 +56,19 @@
    phoneverification
    
    
-.. _phoneverification-docs:
+.. _viber-docs:
 .. toctree::
    :maxdepth: 2
    :caption: Viber
    
    viber-resender
 
+.. _addressbookapi-docs:
+.. toctree::
+   :maxdepth: 2
+   :caption: Адресная книга
+   
+   addressbookapi
 
 .. _email-docs:   
 .. toctree::
