@@ -573,6 +573,88 @@ messageID.
 | Rejected          |  int    | Количество отклоненных сообщений  |
 +-------------------+---------+-----------------------------------+
 
+
+Отправка Viber адресатам и возвращение системных идентификаторов сообщений
+--------------------------------------------------------------------------
+
+Данный метод поддерживает массовую отправку сообщений (до 1000 сообщений) в одном запросе.
+Пример запроса:
+
+.. code-block:: xml
+
+    POST /ViberService.asmx HTTP/1.1
+    Host: ws.devinotele.com
+    Content-Type: application/soap+xml; charset=utf-8
+    Content-Length: length
+    <?xml version="1.0" encoding="utf-8"?>
+    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+      <soap12:Body>
+        <SendMessage xmlns="http://ws.devinosms.com">
+          <sessionID>string</sessionID>
+          <message>
+              <Data>string</Data>
+              <DelayUntilUtc>dateTime</DelayUntilUtc>
+              <DestinationAddresses>
+                <string>string</string>
+                <string>string</string>
+              </DestinationAddresses>
+              <SourceAddress>string</SourceAddress>
+              <ReceiptRequested>boolean</ReceiptRequested>
+              <Validity>int</Validity>
+              <Optional>string</Optional>
+          </message>
+        </SendMessage>
+      </soap12:Body>
+    </soap12:Envelope>
+    
+
+Таблица 11 - Описание параметров SendMessage
+
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+|     Параметр       | Тип данных |Обязательность | Описание                                                              |
++====================+============+===============+=======================================================================+
+| Data               |  String    |  Да           | Текст сообщения, сообщение не должно быть длиннее 1000 символов       |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| DelayUntilUtc      |  DateTime  |  Нет          | Время отправки. Если не заполнено, то отправляется немедленно.        |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| DestinationAddress |  String [] |  Да           | Номер получателя сообщения в международном формате: код страны + код  |
+|                    |            |               | сети + номер телефона. Пример: 79031234567, +79031234567, 89031234567 |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| Optional           |  String    |  Нет          | Дополнительный параметр                                               |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| ReceiptRequested   |  Boolean   |  Нет          | Запрос о доставке                                                     |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| SourceAddress      |  String    |  Да           | Адрес отправителя сообщения. До 11 латинских или цифровых символов.   |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+| Validity           |  Int       |  Нет          | Время жизни сообщения (сек), по умолчанию 86400 сек.                  |
++--------------------+------------+---------------+-----------------------------------------------------------------------+
+
+
+Пример ответа:
+
+.. code-block:: xml
+
+    HTTP/1.1 200 OK
+    Content-Type: application/soap+xml; charset=utf-8
+    Content-Length: length
+    <?xml version="1.0" encoding="utf-8"?>
+    <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+      <soap12:Body>
+       <SendMessageResponse xmlns="http://ws.devinosms.com">
+          <SendMessageResult>
+             <string>string</string>
+             <string>string</string>
+           </SendMessageResult>
+       </SendMessageResponse>
+      </soap12:Body>
+    </soap12:Envelope>
+    
+ 
+
 Коды ошибок и статусы сообщений
 -------------------------------
 
