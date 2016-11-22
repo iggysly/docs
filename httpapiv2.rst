@@ -28,12 +28,14 @@ API Сервиса отправки SMS сообщений организова�
 Сервис возвращает значение баланса авторизованного пользователя в соответствии со значениями параметров, передаваемых сервису в GET-запросе следующего формата: 
 
 .. code-block:: python
+
   https://integrationapi.net/Rest/v2/User/Balance?Login=<Логин>&Password=<Пароль> 
   
 
 Ниже приведен пример запроса: 
 
 .. code-block:: python
+
   https://integrationapi.net/Rest/v2/User/Balance?Login=test_login&Password=test123    
   
 
@@ -214,7 +216,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/v2/Sms/SendByTimeZoneLogin=test_login&Password=test123&SourceAddress=TESTSMS&DestinationAddress=79001234567& Data=testdata&Validity=10&sendDate=2011-01-28T16:00:00 
+  https://integrationapi.net/rest/v2/Sms/SendByTimeZone?Login=test_login&Password=test123&SourceAddress=TESTSMS&DestinationAddress=79001234567&Data=testdata&Validity=10&sendDate=2011-01-28T16:00:00 
   
 
 В Табл. 4 приводится полный список параметров запроса. 
@@ -331,7 +333,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/v2/Sms/SendBulk?Login=test_login&Password=test123&SourceAddress=TESTSMS&&DestinationAddresses=79001234567&DestinationAddresses= 79059999999&Data=testdata&Validity=10
+  https://integrationapi.net/rest/v2/Sms/SendBulk?Login=test_login&Password=test123&SourceAddress=TESTSMS&DestinationAddresses=79001234567&DestinationAddresses= 79059999999&Data=testdata&Validity=10
   
 
 В Табл. 5 приводится полный список параметров запроса. 
@@ -565,7 +567,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/Sms/In?Login=test_login&Password=test123&minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
+  https://integrationapi.net/rest/v2/Sms/In?Login=test_login&Password=test123&minDateUTC=2011-01-01T00:00:00&maxDateUTC=2011-01-11T00:00:00
 
 
 Табл. 8. Параметры GET-запроса на получение сообщений за период  
@@ -663,7 +665,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/rest/Sms/Statistics?Login=test_login&Password=test123&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-0118%2023:59:00
+  https://integrationapi.net/rest/v2/Sms/Statistics?Login=test_login&Password=test123&startDateTime=2012-01-18%2000:00:00&endDateTime=2012-0118%2023:59:00
 
 
 Табл. 9. Параметры GET-запроса на формирование статистики за период  
@@ -757,7 +759,7 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-    https://integrationapi.net/rest/v2/Viber/Send?Login=Test&Password=Test&&SourceAddress=DTSMS&DestinationAddress=79001234567&Data=testdata&Validity=86400&Optional=123456
+    https://integrationapi.net/rest/v2/Viber/Send?Login=Test&Password=Test&SourceAddress=DTSMS&DestinationAddress=79001234567&Data=testdata&Validity=86400&Optional=123456
     
 
 В Таблице 10 ниже приводится полный список параметров запроса.
@@ -945,7 +947,7 @@ API Сервиса отправки SMS сообщений организова�
 +=================+==================+=================================+
 |    -            |   200            |  Operation complete             |
 +-----------------+------------------+---------------------------------+
-|   1             |  400             | Argument cannot be null or empty|
+| 1               |  400             | Argument cannot be null or empty|
 +-----------------+------------------+---------------------------------+
 | 2               |  400             | Invalid argument                |
 +-----------------+------------------+---------------------------------+
