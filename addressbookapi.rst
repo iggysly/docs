@@ -153,7 +153,7 @@ ContactGroups GET (all)
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/ContactGroups 
+        https://integrationapi.net/addressbook/v2/ContactGroups 
         
 
 Метод возвращает список всех групп контактов пользователя. Возвращаемый результат - список объектов типа ContactGroupDto.
@@ -205,7 +205,7 @@ ContactGroups GET
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        https://integrationapi.net/addressbook/v2/ContactGroups/{ContactGroupId}
         
 
 Метод возвращает группу по идентификатору. В качестве Result возвращается объект ContactGroupDto, описание см. выше.
@@ -235,51 +235,12 @@ ContactGroups GET
     }
     
 
-ContactGroups POST
-------------------
-
-.. code-block:: json
-
-        https://integrationapi.net/addressbook/v1/ContactGroups
-        
-
-Метод добавляет новую группу контактов. Если группа была успешно добавлена, возвращается код "ok" и http код 201. Метод возвращает 
-идентификатор группы ContactGroupId в качестве Result.
-
-**Параметры запроса:**
-
-+-------------+------------+-----------------+--------------------+
-|  Параметр   | Тип данных |    Описание     |  Обязательнй       | 
-+=============+============+=================+====================+
-|  Name       | string     | Имя группы      | Да                 |
-+-------------+------------+-----------------+--------------------+
-| Description | string     | Описание группы | Нет                |
-+-------------+------------+-----------------+--------------------+
-
-**Пример запроса:**
-
-.. code-block:: json
-
-    {"Name":"new group","Description":"best group"}
-    
-
-**Пример ответа:**
-
-.. code-block:: json
-
-    {
-        "Result": 332,
-        "Code": "ok",
-        "Description": "ok"
-    }
-    
-
 ContactGroups PUT
 -----------------
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        https://integrationapi.net/addressbook/v2/ContactGroups/{ContactGroupId}
         
 
 Метод обновляет имя и описание группы, затирая старые значения, возвращается только стандартный ответ, без поля Result.
@@ -318,7 +279,7 @@ ContactGroups DELETE
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}
+        https://integrationapi.net/addressbook/v2/ContactGroups/{ContactGroupId}
         
 
 Метод удаляет группу, возвращается только стандартный ответ, без поля Result.
@@ -346,7 +307,7 @@ ContactGroups POST (contacts import)
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/ContactGroups/{ContactGroupId}/Contacts
+        https://integrationapi.net/addressbook/v2/ContactGroups/{ContactGroupId}/Contacts
         
 
 Метод импортирует пачку контактов. Если контакты были успешно добавлены, возвращается код "ok" и http код 201. 
@@ -484,7 +445,7 @@ Contacts GET (query)
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Contacts?Query={Key}
+        https://integrationapi.net/addressbook/v2/Contacts?Query={Key}
         
 
 Метод возвращает контакты по ключу, в качестве ключа может выступать email или номер телефона. Возвращаемый результат - список объектов типа ContactDto. Также необходимо задать диапазон возвращаемых записей.
@@ -563,7 +524,7 @@ Contacts GET
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        https://integrationapi.net/addressbook/v2/Contacts/{ContactId}
         
 
 Метод возвращает контакт по идентификатору, в качестве Result возвращается объект ContactDto, описание см. выше.
@@ -604,7 +565,7 @@ Contacts POST
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Contacts
+        https://integrationapi.net/addressbook/v2/Contacts
         
 
 Метод создаёт контакт. Если контакт был успешно создан, возвращается код "ok" и http код 201. В качестве Result возвращается идентификатор контакта.
@@ -679,7 +640,7 @@ Contacts PATCH
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        https://integrationapi.net/addressbook/v2/Contacts/{ContactId}
         
 
 Метод обновляет контакт. (PATCH по идеологии аналогичен PUT, с той лишь разницей, что PUT полностью заменяет ресурс, а PATCH меняет только те параметры, которые переданы.)
@@ -743,7 +704,7 @@ Contacts DELETE
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Contacts/{ContactId}
+        https://integrationapi.net/addressbook/v2/Contacts/{ContactId}
         
 
 Метод удаляет контакт, возвращается только стандартный ответ, без поля Result.
@@ -774,7 +735,7 @@ Unsubscribed GET
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v1/Unsubscribed?TaskId={TaskId}
+        https://integrationapi.net/addressbook/v2/Unsubscribed?TaskId={TaskId}
         
         
 Метод возвращает список отписавшихся от email рассылок. Можно получить список отписавшихся от определённой рассылки, для этого  предусмотрен параметр taskId. Возвращаемый результат - список объектов типа UnsubscribedDto. Также необходимо задать диапазон возвращаемых записей.
