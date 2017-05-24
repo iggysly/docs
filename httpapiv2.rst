@@ -33,14 +33,14 @@ API Сервиса отправки SMS сообщений организова�
 
 .. code-block:: python
 
-  https://integrationapi.net/Rest/v2/User/Balance?Login=<Логин>&Password=<Пароль> 
+  https://integrationapi.net/rest/v2/User/Balance?Login=<Логин>&Password=<Пароль> 
   
 
 Ниже приведен пример запроса: 
 
 .. code-block:: python
 
-  https://integrationapi.net/Rest/v2/User/Balance?Login=test_login&Password=test123    
+  https://integrationapi.net/rest/v2/User/Balance?Login=test_login&Password=test123    
   
 
 В Табл. 1 приводится полный список параметров запроса. 
