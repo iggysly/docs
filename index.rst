@@ -47,22 +47,6 @@
    
    httpapihlr
    
-.. _imsi-docs:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: IMSI
-   
-   imsi
-
-
-.. _phoneverification-docs:
-.. toctree::
-   :maxdepth: 2
-   :caption: Сервис двухфакторной аутентификации
-   
-   phoneverification
-   
    
 .. _viber-docs:
 .. toctree::
@@ -71,12 +55,6 @@
    
    viber-resender
 
-.. _addressbookapi-docs:
-.. toctree::
-   :maxdepth: 2
-   :caption: Адресная книга
-   
-   addressbookapi
 
 .. _email-docs:   
 .. toctree::
@@ -85,3 +63,28 @@
    
    emailsmtp
    emailhttp
+   
+
+.. _addressbookapi-docs:
+.. toctree::
+   :maxdepth: 2
+   :caption: Адресная книга
+   
+   addressbookapi
+   
+
+.. _phoneverification-docs:
+.. toctree::
+   :maxdepth: 2
+   :caption: Сервис двухфакторной аутентификации
+   
+   phoneverification
+
+  
+.. _imsi-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: IMSI
+   
+   imsi
