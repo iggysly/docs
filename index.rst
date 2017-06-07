@@ -38,14 +38,6 @@
    :caption: Входящие сообщения
    
    httppriem
-
-.. _hlr-docs:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: HLR HTTP API
-   
-   httpapihlr
    
    
 .. _viber-docs:
@@ -63,7 +55,15 @@
    
    emailsmtp
    emailhttp
+
+
+.. _hlr-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: HLR HTTP API
    
+   httpapihlr   
 
 .. _addressbookapi-docs:
 .. toctree::
