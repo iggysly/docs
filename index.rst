@@ -39,6 +39,14 @@
    
    httppriem
 
+.. _hlr-docs:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: HLR HTTP API
+   
+   httpapihlr
+   
 .. _imsi-docs:
 
 .. toctree::
