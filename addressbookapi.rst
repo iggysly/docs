@@ -502,7 +502,7 @@ ContactsImport Duplicates DELETE
 
 .. code-block:: json
 
-        https://integrationapi.net/addressbook/v2/ContactsImport/{ImportId}/Delete
+        https://integrationapi.net/addressbook/v2/ContactsImport/{ImportId}/Duplicates
         
         
 Метод удаляет дубликаты по идентификатору импорта, который передаётся в url.
@@ -546,7 +546,7 @@ ContactsImport Duplicates DELETE
 +------------+-------+--------------------------------+
 | Import     | 1     | Проверяем в рамках импорта     |
 +------------+-------+--------------------------------+
-| Email      | 2     | Проверяем в переданных группах |
+| Groups     | 2     | Проверяем в переданных группах |
 +------------+-------+--------------------------------+
 
 DuplicatesCheckScope является битовой маской, можно передавать сочетания значений, т.е. можно передать 3 и проверка будет выполнена в рамках импорта и в переданных группах.
