@@ -172,7 +172,7 @@ API поддерживает базовую авторизацию через з
 Удаление адреса отправителя
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- **DELETE   /UserSettings/SourceAddresses/{SourceAddress}**
+ **DELETE   /UserSettings/SenderAddresses/{SenderAddresses}**
 
 Параметры запроса
 
