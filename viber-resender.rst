@@ -318,7 +318,6 @@ API поддерживает базовую авторизацию через з
                 },
                 {
                     "priority" : "low",
-                    "contentType" : "text",
                     "content" : {
                         "text" : "Message text"
                     },
