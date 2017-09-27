@@ -377,11 +377,12 @@ Authorization: Basic dGVzdGVyOjExMTExMQ==
 ----------------------------
 
 .. code-block:: python
-  [{
+
+   [{
     "id":1343343,
     "status": "DELIVERED",
     "time": "2017-05-31 14:51:12"
-   }]
+    }]
 	
   
 Описание полей запроса
