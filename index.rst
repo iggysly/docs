@@ -56,6 +56,12 @@
    emailsmtp
    emailhttp
 
+.. _vk-docs:
+.. toctree::
+   :maxdepth: 2
+   :caption: VK API
+
+   VKAPI
 
 .. _hlr-docs:
 
