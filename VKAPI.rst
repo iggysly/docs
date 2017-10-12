@@ -61,7 +61,7 @@ Authorization: Basic dGVzdGVyOjExMTExMQ==
 
 .. code-block:: python
 
-  http(s)://<host>:<port>/send/vk
+  http(s)://vk-send.devinotele.com/send/vk
 
 В одном запросе может быть информация об отправке только одного сообщения.
 
