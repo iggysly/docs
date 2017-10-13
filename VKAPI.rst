@@ -251,7 +251,7 @@ Authorization: Basic dGVzdGVyOjExMTExMQ==
 Платформа Devino возвращает статус доставки ранее отправленного VK-сообщения, messageId которого был ранее передан в теле GET-запроса:
 
 .. code-block:: python
-	http(s)://<host>:<port>/status/vk?message=<ID Вашего сообщения>
+	https://vk-send.devinotele.com/status/vk?message=<ID Вашего сообщения>
 	
 **Пример ответа на запрос статусов**
 
