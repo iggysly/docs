@@ -83,7 +83,7 @@ Authorization: Basic dGVzdGVyOjExMTExMQ==
     "sms": {
         "srcAddress": "TESTSMS",
         "text": "текст сообщения",
-        "validityPeriod": 30
+        "validityPeriod": 60
     	   }
   	}
    }
