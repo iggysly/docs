@@ -537,7 +537,10 @@ ContactGroupDto:
                 "Name":"yyy"
             },
             "Subject":"test subj",
-            "Text":"test [Unsubscribe][WebVersion]",
+            "Body": {
+                "Html": "Ув. [Name]! Осталось [ExtField] [Unsubscribe]  [WebVersion]",
+                "PlainText": "Ув. {ExtField}! Ждем вас завтра! [Unsubscribe]"
+            },
             "StartDateTime":"08/31/2015 13:30:38",
             "UserCampaignId":"",
             "ContactGroups":[
